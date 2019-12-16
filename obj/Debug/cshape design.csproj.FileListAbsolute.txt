@@ -1,0 +1,27 @@
+C:\Users\qiang\Desktop\c#课程设计\c#code\cshape design\bin\Debug\cshape design.exe.config
+C:\Users\qiang\Desktop\c#课程设计\c#code\cshape design\bin\Debug\cshape design.exe
+C:\Users\qiang\Desktop\c#课程设计\c#code\cshape design\bin\Debug\cshape design.pdb
+C:\Users\qiang\Desktop\c#课程设计\c#code\cshape design\obj\Debug\cshape design.csprojAssemblyReference.cache
+C:\Users\qiang\Desktop\c#课程设计\c#code\cshape design\obj\Debug\cshape_design.FrmMain.resources
+C:\Users\qiang\Desktop\c#课程设计\c#code\cshape design\obj\Debug\cshape_design.Properties.Resources.resources
+C:\Users\qiang\Desktop\c#课程设计\c#code\cshape design\obj\Debug\cshape design.csproj.GenerateResource.cache
+C:\Users\qiang\Desktop\c#课程设计\c#code\cshape design\obj\Debug\cshape design.exe
+C:\Users\qiang\Desktop\c#课程设计\c#code\cshape design\obj\Debug\cshape design.pdb
+C:\c#课程设计\c#code\cshape design\bin\Debug\cshape design.exe.config
+C:\c#课程设计\c#code\cshape design\bin\Debug\cshape design.exe
+C:\c#课程设计\c#code\cshape design\bin\Debug\cshape design.pdb
+C:\c#课程设计\c#code\cshape design\obj\Debug\cshape design.csprojAssemblyReference.cache
+C:\c#课程设计\c#code\cshape design\obj\Debug\cshape_design.FrmMain.resources
+C:\c#课程设计\c#code\cshape design\obj\Debug\cshape_design.Properties.Resources.resources
+C:\c#课程设计\c#code\cshape design\obj\Debug\cshape design.csproj.GenerateResource.cache
+C:\c#课程设计\c#code\cshape design\obj\Debug\cshape design.exe
+C:\c#课程设计\c#code\cshape design\obj\Debug\cshape design.pdb
+I:\code\C#\课设2\C-_curriculum-design\bin\Debug\cshape design.exe.config
+I:\code\C#\课设2\C-_curriculum-design\bin\Debug\cshape design.exe
+I:\code\C#\课设2\C-_curriculum-design\bin\Debug\cshape design.pdb
+I:\code\C#\课设2\C-_curriculum-design\obj\Debug\cshape design.csprojAssemblyReference.cache
+I:\code\C#\课设2\C-_curriculum-design\obj\Debug\cshape_design.FrmMain.resources
+I:\code\C#\课设2\C-_curriculum-design\obj\Debug\cshape_design.Properties.Resources.resources
+I:\code\C#\课设2\C-_curriculum-design\obj\Debug\cshape design.csproj.GenerateResource.cache
+I:\code\C#\课设2\C-_curriculum-design\obj\Debug\cshape design.exe
+I:\code\C#\课设2\C-_curriculum-design\obj\Debug\cshape design.pdb

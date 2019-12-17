@@ -57,6 +57,9 @@
             this.DoFlag1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Explain1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelPlanStat = new System.Windows.Forms.Panel();
+            this.btnSatr = new System.Windows.Forms.Button();
+            this.rb2 = new System.Windows.Forms.RadioButton();
+            this.rb1 = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -68,33 +71,16 @@
             this.PlanContent2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DoFlag2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Explain2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rb1 = new System.Windows.Forms.RadioButton();
-            this.rb2 = new System.Windows.Forms.RadioButton();
-            this.btnSatr = new System.Windows.Forms.Button();
             this.panelHisSearch = new System.Windows.Forms.Panel();
+            this.txtHisContent = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cbxYear = new System.Windows.Forms.ComboBox();
             this.btnHisQuery = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cbxYear = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtHisContent = new System.Windows.Forms.TextBox();
-            this.panelPlanEdit = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.dgvPlanRegister = new System.Windows.Forms.DataGridView();
-            this.txtPlanTitle = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rtbPlanContent = new System.Windows.Forms.RichTextBox();
-            this.cbxPlanKind = new System.Windows.Forms.ComboBox();
-            this.dtpExecuteTime = new System.Windows.Forms.DateTimePicker();
-            this.label16 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnDel = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PlanTitle3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PlanKind3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -102,6 +88,43 @@
             this.PlanContent3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DoFlag3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Explain3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelPlanEdit = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.dtpExecuteTime = new System.Windows.Forms.DateTimePicker();
+            this.cbxPlanKind = new System.Windows.Forms.ComboBox();
+            this.rtbPlanContent = new System.Windows.Forms.RichTextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtPlanTitle = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.dgvPlanRegister = new System.Windows.Forms.DataGridView();
+            this.panelSetting = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.nudTimerInterval = new System.Windows.Forms.NumericUpDown();
+            this.nudDays = new System.Windows.Forms.NumericUpDown();
+            this.btnSetOK = new System.Windows.Forms.Button();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.stip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiOpen = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PlanTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PlanKind = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -109,27 +132,6 @@
             this.PlanContent = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DoFlag = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Explain = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.btnSetOK = new System.Windows.Forms.Button();
-            this.nudDays = new System.Windows.Forms.NumericUpDown();
-            this.nudTimerInterval = new System.Windows.Forms.NumericUpDown();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.stip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tsmiOpen = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picPlanSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSet)).BeginInit();
@@ -143,11 +145,11 @@
             this.panelHisSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelPlanEdit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPlanRegister)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDays)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPlanRegister)).BeginInit();
+            this.panelSetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTimerInterval)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDays)).BeginInit();
             this.stip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -162,7 +164,8 @@
             this.picPlanSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picPlanSearch.TabIndex = 0;
             this.picPlanSearch.TabStop = false;
-            this.picPlanSearch.Click += new System.EventHandler(this.picPlanSearch_Click);
+            this.picPlanSearch.MouseEnter += new System.EventHandler(this.picPlanSearch_MouseEnter);
+            this.picPlanSearch.MouseLeave += new System.EventHandler(this.picPlanSearch_MouseLeave);
             // 
             // picExit
             // 
@@ -175,6 +178,8 @@
             this.picExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picExit.TabIndex = 1;
             this.picExit.TabStop = false;
+            this.picExit.MouseEnter += new System.EventHandler(this.picExit_MouseEnter);
+            this.picExit.MouseLeave += new System.EventHandler(this.picExit_MouseLeave);
             // 
             // picSet
             // 
@@ -187,6 +192,8 @@
             this.picSet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picSet.TabIndex = 2;
             this.picSet.TabStop = false;
+            this.picSet.MouseEnter += new System.EventHandler(this.picSet_MouseEnter);
+            this.picSet.MouseLeave += new System.EventHandler(this.picSet_MouseLeave);
             // 
             // picAddPlan
             // 
@@ -199,6 +206,8 @@
             this.picAddPlan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picAddPlan.TabIndex = 3;
             this.picAddPlan.TabStop = false;
+            this.picAddPlan.MouseEnter += new System.EventHandler(this.picAddPlan_MouseEnter);
+            this.picAddPlan.MouseLeave += new System.EventHandler(this.picAddPlan_MouseLeave);
             // 
             // picHisSearch
             // 
@@ -211,6 +220,8 @@
             this.picHisSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picHisSearch.TabIndex = 4;
             this.picHisSearch.TabStop = false;
+            this.picHisSearch.MouseEnter += new System.EventHandler(this.picHisSearch_MouseEnter);
+            this.picHisSearch.MouseLeave += new System.EventHandler(this.picHisSearch_MouseLeave);
             // 
             // picStat
             // 
@@ -223,6 +234,8 @@
             this.picStat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picStat.TabIndex = 5;
             this.picStat.TabStop = false;
+            this.picStat.MouseEnter += new System.EventHandler(this.picStat_MouseEnter);
+            this.picStat.MouseLeave += new System.EventHandler(this.picStat_MouseLeave);
             // 
             // panelPlanSearch
             // 
@@ -257,7 +270,7 @@
             // 
             this.txb_Key.Location = new System.Drawing.Point(595, 156);
             this.txb_Key.Name = "txb_Key";
-            this.txb_Key.Size = new System.Drawing.Size(100, 25);
+            this.txb_Key.Size = new System.Drawing.Size(100, 21);
             this.txb_Key.TabIndex = 12;
             // 
             // label6
@@ -273,7 +286,7 @@
             // 
             this.txbPreDay.Location = new System.Drawing.Point(593, 66);
             this.txbPreDay.Name = "txbPreDay";
-            this.txbPreDay.Size = new System.Drawing.Size(100, 25);
+            this.txbPreDay.Size = new System.Drawing.Size(100, 21);
             this.txbPreDay.TabIndex = 10;
             // 
             // btn_ser
@@ -300,7 +313,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(504, 166);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 15);
+            this.label3.Size = new System.Drawing.Size(65, 12);
             this.label3.TabIndex = 5;
             this.label3.Text = "内容关键字";
             // 
@@ -309,7 +322,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(508, 76);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 15);
+            this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 4;
             this.label2.Text = "提前天数";
             // 
@@ -327,7 +340,7 @@
             this.chb.AutoSize = true;
             this.chb.Location = new System.Drawing.Point(532, 131);
             this.chb.Name = "chb";
-            this.chb.Size = new System.Drawing.Size(149, 19);
+            this.chb.Size = new System.Drawing.Size(120, 16);
             this.chb.TabIndex = 2;
             this.chb.Text = "按照计划内容查询";
             this.chb.UseVisualStyleBackColor = true;
@@ -337,7 +350,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(535, 33);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(149, 19);
+            this.checkBox1.Size = new System.Drawing.Size(120, 16);
             this.checkBox1.TabIndex = 1;
             this.checkBox1.Text = "按照提前天数查询";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -431,12 +444,44 @@
             this.panelPlanStat.Controls.Add(this.label9);
             this.panelPlanStat.Controls.Add(this.label10);
             this.panelPlanStat.Controls.Add(this.dataGridView2);
-            this.panelPlanStat.Location = new System.Drawing.Point(0, 94);
+            this.panelPlanStat.Location = new System.Drawing.Point(2, 93);
             this.panelPlanStat.Margin = new System.Windows.Forms.Padding(6);
             this.panelPlanStat.Name = "panelPlanStat";
             this.panelPlanStat.Size = new System.Drawing.Size(704, 294);
             this.panelPlanStat.TabIndex = 7;
             this.panelPlanStat.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPlanStat_Paint);
+            // 
+            // btnSatr
+            // 
+            this.btnSatr.Location = new System.Drawing.Point(618, 218);
+            this.btnSatr.Name = "btnSatr";
+            this.btnSatr.Size = new System.Drawing.Size(77, 43);
+            this.btnSatr.TabIndex = 16;
+            this.btnSatr.Text = "查询";
+            this.btnSatr.UseVisualStyleBackColor = true;
+            // 
+            // rb2
+            // 
+            this.rb2.AutoSize = true;
+            this.rb2.Location = new System.Drawing.Point(511, 144);
+            this.rb2.Name = "rb2";
+            this.rb2.Size = new System.Drawing.Size(119, 16);
+            this.rb2.TabIndex = 15;
+            this.rb2.TabStop = true;
+            this.rb2.Text = "未按期执行的计划";
+            this.rb2.UseVisualStyleBackColor = true;
+            this.rb2.CheckedChanged += new System.EventHandler(this.rb2_CheckedChanged);
+            // 
+            // rb1
+            // 
+            this.rb1.AutoSize = true;
+            this.rb1.Location = new System.Drawing.Point(511, 106);
+            this.rb1.Name = "rb1";
+            this.rb1.Size = new System.Drawing.Size(131, 16);
+            this.rb1.TabIndex = 14;
+            this.rb1.TabStop = true;
+            this.rb1.Text = "已经按期执行的计划";
+            this.rb1.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -454,7 +499,7 @@
             this.label9.ForeColor = System.Drawing.Color.Red;
             this.label9.Location = new System.Drawing.Point(506, 37);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(187, 15);
+            this.label9.Size = new System.Drawing.Size(149, 12);
             this.label9.TabIndex = 4;
             this.label9.Text = "统计本年度计划的实行情况";
             // 
@@ -547,38 +592,6 @@
             this.Explain2.Name = "Explain2";
             this.Explain2.Width = 125;
             // 
-            // rb1
-            // 
-            this.rb1.AutoSize = true;
-            this.rb1.Location = new System.Drawing.Point(511, 106);
-            this.rb1.Name = "rb1";
-            this.rb1.Size = new System.Drawing.Size(163, 19);
-            this.rb1.TabIndex = 14;
-            this.rb1.TabStop = true;
-            this.rb1.Text = "已经按期执行的计划";
-            this.rb1.UseVisualStyleBackColor = true;
-            // 
-            // rb2
-            // 
-            this.rb2.AutoSize = true;
-            this.rb2.Location = new System.Drawing.Point(511, 144);
-            this.rb2.Name = "rb2";
-            this.rb2.Size = new System.Drawing.Size(148, 19);
-            this.rb2.TabIndex = 15;
-            this.rb2.TabStop = true;
-            this.rb2.Text = "未按期执行的计划";
-            this.rb2.UseVisualStyleBackColor = true;
-            this.rb2.CheckedChanged += new System.EventHandler(this.rb2_CheckedChanged);
-            // 
-            // btnSatr
-            // 
-            this.btnSatr.Location = new System.Drawing.Point(618, 218);
-            this.btnSatr.Name = "btnSatr";
-            this.btnSatr.Size = new System.Drawing.Size(77, 43);
-            this.btnSatr.TabIndex = 16;
-            this.btnSatr.Text = "查询";
-            this.btnSatr.UseVisualStyleBackColor = true;
-            // 
             // panelHisSearch
             // 
             this.panelHisSearch.Controls.Add(this.txtHisContent);
@@ -595,6 +608,39 @@
             this.panelHisSearch.Name = "panelHisSearch";
             this.panelHisSearch.Size = new System.Drawing.Size(704, 294);
             this.panelHisSearch.TabIndex = 8;
+            // 
+            // txtHisContent
+            // 
+            this.txtHisContent.Location = new System.Drawing.Point(584, 155);
+            this.txtHisContent.Name = "txtHisContent";
+            this.txtHisContent.Size = new System.Drawing.Size(110, 21);
+            this.txtHisContent.TabIndex = 20;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(505, 162);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(65, 12);
+            this.label13.TabIndex = 19;
+            this.label13.Text = "内容关键字";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(505, 99);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(53, 12);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "历史年份";
+            // 
+            // cbxYear
+            // 
+            this.cbxYear.FormattingEnabled = true;
+            this.cbxYear.Location = new System.Drawing.Point(574, 92);
+            this.cbxYear.Name = "cbxYear";
+            this.cbxYear.Size = new System.Drawing.Size(121, 20);
+            this.cbxYear.TabIndex = 17;
             // 
             // btnHisQuery
             // 
@@ -621,7 +667,7 @@
             this.label8.ForeColor = System.Drawing.Color.Red;
             this.label8.Location = new System.Drawing.Point(506, 37);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(187, 15);
+            this.label8.Size = new System.Drawing.Size(149, 12);
             this.label8.TabIndex = 4;
             this.label8.Text = "统计本年度计划的实行情况";
             // 
@@ -654,189 +700,6 @@
             this.dataGridView1.RowTemplate.Height = 27;
             this.dataGridView1.Size = new System.Drawing.Size(499, 291);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // cbxYear
-            // 
-            this.cbxYear.FormattingEnabled = true;
-            this.cbxYear.Location = new System.Drawing.Point(574, 92);
-            this.cbxYear.Name = "cbxYear";
-            this.cbxYear.Size = new System.Drawing.Size(121, 23);
-            this.cbxYear.TabIndex = 17;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(505, 99);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(67, 15);
-            this.label12.TabIndex = 18;
-            this.label12.Text = "历史年份";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(505, 162);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(82, 15);
-            this.label13.TabIndex = 19;
-            this.label13.Text = "内容关键字";
-            // 
-            // txtHisContent
-            // 
-            this.txtHisContent.Location = new System.Drawing.Point(584, 155);
-            this.txtHisContent.Name = "txtHisContent";
-            this.txtHisContent.Size = new System.Drawing.Size(110, 25);
-            this.txtHisContent.TabIndex = 20;
-            // 
-            // panelPlanEdit
-            // 
-            this.panelPlanEdit.Controls.Add(this.groupBox1);
-            this.panelPlanEdit.Controls.Add(this.dgvPlanRegister);
-            this.panelPlanEdit.Location = new System.Drawing.Point(2, 81);
-            this.panelPlanEdit.Margin = new System.Windows.Forms.Padding(6);
-            this.panelPlanEdit.Name = "panelPlanEdit";
-            this.panelPlanEdit.Size = new System.Drawing.Size(704, 294);
-            this.panelPlanEdit.TabIndex = 9;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(1, 50);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(67, 15);
-            this.label14.TabIndex = 19;
-            this.label14.Text = "计划种类";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(0, 78);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(67, 15);
-            this.label15.TabIndex = 18;
-            this.label15.Text = "历史年份";
-            // 
-            // dgvPlanRegister
-            // 
-            this.dgvPlanRegister.AllowUserToAddRows = false;
-            this.dgvPlanRegister.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dgvPlanRegister.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPlanRegister.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
-            this.PlanTitle,
-            this.PlanKind,
-            this.ExecuteTime,
-            this.PlanContent,
-            this.DoFlag,
-            this.Explain});
-            this.dgvPlanRegister.Location = new System.Drawing.Point(3, 3);
-            this.dgvPlanRegister.Name = "dgvPlanRegister";
-            this.dgvPlanRegister.RowHeadersVisible = false;
-            this.dgvPlanRegister.RowHeadersWidth = 51;
-            this.dgvPlanRegister.RowTemplate.Height = 27;
-            this.dgvPlanRegister.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPlanRegister.Size = new System.Drawing.Size(499, 291);
-            this.dgvPlanRegister.TabIndex = 0;
-            // 
-            // txtPlanTitle
-            // 
-            this.txtPlanTitle.Location = new System.Drawing.Point(69, 12);
-            this.txtPlanTitle.Name = "txtPlanTitle";
-            this.txtPlanTitle.Size = new System.Drawing.Size(123, 25);
-            this.txtPlanTitle.TabIndex = 22;
-            this.txtPlanTitle.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(1, 21);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(67, 15);
-            this.label19.TabIndex = 21;
-            this.label19.Text = "计划标题";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnDel);
-            this.groupBox1.Controls.Add(this.btnSave);
-            this.groupBox1.Controls.Add(this.btnAdd);
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.dtpExecuteTime);
-            this.groupBox1.Controls.Add(this.cbxPlanKind);
-            this.groupBox1.Controls.Add(this.rtbPlanContent);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.txtPlanTitle);
-            this.groupBox1.Controls.Add(this.label19);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Location = new System.Drawing.Point(504, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 288);
-            this.groupBox1.TabIndex = 23;
-            this.groupBox1.TabStop = false;
-            // 
-            // rtbPlanContent
-            // 
-            this.rtbPlanContent.Enabled = false;
-            this.rtbPlanContent.Location = new System.Drawing.Point(-1, 118);
-            this.rtbPlanContent.Name = "rtbPlanContent";
-            this.rtbPlanContent.Size = new System.Drawing.Size(200, 139);
-            this.rtbPlanContent.TabIndex = 23;
-            this.rtbPlanContent.Text = "";
-            this.rtbPlanContent.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
-            // 
-            // cbxPlanKind
-            // 
-            this.cbxPlanKind.FormattingEnabled = true;
-            this.cbxPlanKind.Location = new System.Drawing.Point(69, 43);
-            this.cbxPlanKind.Name = "cbxPlanKind";
-            this.cbxPlanKind.Size = new System.Drawing.Size(121, 23);
-            this.cbxPlanKind.TabIndex = 24;
-            // 
-            // dtpExecuteTime
-            // 
-            this.dtpExecuteTime.CustomFormat = "yyyy-MM-dd";
-            this.dtpExecuteTime.Enabled = false;
-            this.dtpExecuteTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpExecuteTime.Location = new System.Drawing.Point(68, 74);
-            this.dtpExecuteTime.Name = "dtpExecuteTime";
-            this.dtpExecuteTime.Size = new System.Drawing.Size(124, 25);
-            this.dtpExecuteTime.TabIndex = 25;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(0, 100);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(75, 15);
-            this.label16.TabIndex = 26;
-            this.label16.Text = "计划内容:";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(5, 259);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(60, 29);
-            this.btnAdd.TabIndex = 27;
-            this.btnAdd.Text = "添加";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(71, 259);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(60, 29);
-            this.btnSave.TabIndex = 28;
-            this.btnSave.Text = "保存";
-            this.btnSave.UseVisualStyleBackColor = true;
-            // 
-            // btnDel
-            // 
-            this.btnDel.Location = new System.Drawing.Point(137, 259);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(60, 29);
-            this.btnDel.TabIndex = 29;
-            this.btnDel.Text = "删除";
-            this.btnDel.UseVisualStyleBackColor = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -897,6 +760,376 @@
             this.Explain3.Name = "Explain3";
             this.Explain3.Width = 125;
             // 
+            // panelPlanEdit
+            // 
+            this.panelPlanEdit.Controls.Add(this.groupBox1);
+            this.panelPlanEdit.Controls.Add(this.dgvPlanRegister);
+            this.panelPlanEdit.Location = new System.Drawing.Point(2, 92);
+            this.panelPlanEdit.Margin = new System.Windows.Forms.Padding(6);
+            this.panelPlanEdit.Name = "panelPlanEdit";
+            this.panelPlanEdit.Size = new System.Drawing.Size(704, 294);
+            this.panelPlanEdit.TabIndex = 9;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnDel);
+            this.groupBox1.Controls.Add(this.btnSave);
+            this.groupBox1.Controls.Add(this.btnAdd);
+            this.groupBox1.Controls.Add(this.label16);
+            this.groupBox1.Controls.Add(this.dtpExecuteTime);
+            this.groupBox1.Controls.Add(this.cbxPlanKind);
+            this.groupBox1.Controls.Add(this.rtbPlanContent);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.txtPlanTitle);
+            this.groupBox1.Controls.Add(this.label19);
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Location = new System.Drawing.Point(504, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 288);
+            this.groupBox1.TabIndex = 23;
+            this.groupBox1.TabStop = false;
+            // 
+            // btnDel
+            // 
+            this.btnDel.Location = new System.Drawing.Point(137, 259);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(60, 29);
+            this.btnDel.TabIndex = 29;
+            this.btnDel.Text = "删除";
+            this.btnDel.UseVisualStyleBackColor = true;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(71, 259);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(60, 29);
+            this.btnSave.TabIndex = 28;
+            this.btnSave.Text = "保存";
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(5, 259);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(60, 29);
+            this.btnAdd.TabIndex = 27;
+            this.btnAdd.Text = "添加";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(0, 100);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(59, 12);
+            this.label16.TabIndex = 26;
+            this.label16.Text = "计划内容:";
+            // 
+            // dtpExecuteTime
+            // 
+            this.dtpExecuteTime.CustomFormat = "yyyy-MM-dd";
+            this.dtpExecuteTime.Enabled = false;
+            this.dtpExecuteTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpExecuteTime.Location = new System.Drawing.Point(68, 74);
+            this.dtpExecuteTime.Name = "dtpExecuteTime";
+            this.dtpExecuteTime.Size = new System.Drawing.Size(124, 21);
+            this.dtpExecuteTime.TabIndex = 25;
+            // 
+            // cbxPlanKind
+            // 
+            this.cbxPlanKind.FormattingEnabled = true;
+            this.cbxPlanKind.Location = new System.Drawing.Point(69, 43);
+            this.cbxPlanKind.Name = "cbxPlanKind";
+            this.cbxPlanKind.Size = new System.Drawing.Size(121, 20);
+            this.cbxPlanKind.TabIndex = 24;
+            // 
+            // rtbPlanContent
+            // 
+            this.rtbPlanContent.Enabled = false;
+            this.rtbPlanContent.Location = new System.Drawing.Point(-1, 118);
+            this.rtbPlanContent.Name = "rtbPlanContent";
+            this.rtbPlanContent.Size = new System.Drawing.Size(200, 139);
+            this.rtbPlanContent.TabIndex = 23;
+            this.rtbPlanContent.Text = "";
+            this.rtbPlanContent.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(1, 50);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(53, 12);
+            this.label14.TabIndex = 19;
+            this.label14.Text = "计划种类";
+            // 
+            // txtPlanTitle
+            // 
+            this.txtPlanTitle.Location = new System.Drawing.Point(69, 12);
+            this.txtPlanTitle.Name = "txtPlanTitle";
+            this.txtPlanTitle.Size = new System.Drawing.Size(123, 21);
+            this.txtPlanTitle.TabIndex = 22;
+            this.txtPlanTitle.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(1, 21);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(53, 12);
+            this.label19.TabIndex = 21;
+            this.label19.Text = "计划标题";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(0, 78);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(53, 12);
+            this.label15.TabIndex = 18;
+            this.label15.Text = "历史年份";
+            // 
+            // dgvPlanRegister
+            // 
+            this.dgvPlanRegister.AllowUserToAddRows = false;
+            this.dgvPlanRegister.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgvPlanRegister.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPlanRegister.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.PlanTitle,
+            this.PlanKind,
+            this.ExecuteTime,
+            this.PlanContent,
+            this.DoFlag,
+            this.Explain});
+            this.dgvPlanRegister.Location = new System.Drawing.Point(3, 3);
+            this.dgvPlanRegister.Name = "dgvPlanRegister";
+            this.dgvPlanRegister.RowHeadersVisible = false;
+            this.dgvPlanRegister.RowHeadersWidth = 51;
+            this.dgvPlanRegister.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvPlanRegister.RowTemplate.Height = 27;
+            this.dgvPlanRegister.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPlanRegister.ShowCellToolTips = false;
+            this.dgvPlanRegister.ShowEditingIcon = false;
+            this.dgvPlanRegister.ShowRowErrors = false;
+            this.dgvPlanRegister.Size = new System.Drawing.Size(499, 291);
+            this.dgvPlanRegister.TabIndex = 0;
+            this.dgvPlanRegister.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPlanRegister_CellContentClick);
+            // 
+            // panelSetting
+            // 
+            this.panelSetting.Controls.Add(this.label26);
+            this.panelSetting.Controls.Add(this.label25);
+            this.panelSetting.Controls.Add(this.label24);
+            this.panelSetting.Controls.Add(this.label23);
+            this.panelSetting.Controls.Add(this.nudTimerInterval);
+            this.panelSetting.Controls.Add(this.nudDays);
+            this.panelSetting.Controls.Add(this.btnSetOK);
+            this.panelSetting.Controls.Add(this.checkBox3);
+            this.panelSetting.Controls.Add(this.checkBox2);
+            this.panelSetting.Controls.Add(this.label22);
+            this.panelSetting.Controls.Add(this.label21);
+            this.panelSetting.Controls.Add(this.label20);
+            this.panelSetting.Controls.Add(this.label18);
+            this.panelSetting.Controls.Add(this.label17);
+            this.panelSetting.Location = new System.Drawing.Point(4, 81);
+            this.panelSetting.Name = "panelSetting";
+            this.panelSetting.Size = new System.Drawing.Size(701, 307);
+            this.panelSetting.TabIndex = 24;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(346, 212);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(53, 12);
+            this.label24.TabIndex = 13;
+            this.label24.Text = "提醒一次";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(148, 212);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(29, 12);
+            this.label23.TabIndex = 12;
+            this.label23.Text = "每隔";
+            // 
+            // nudTimerInterval
+            // 
+            this.nudTimerInterval.DecimalPlaces = 2;
+            this.nudTimerInterval.Location = new System.Drawing.Point(206, 208);
+            this.nudTimerInterval.Maximum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
+            this.nudTimerInterval.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.nudTimerInterval.Name = "nudTimerInterval";
+            this.nudTimerInterval.Size = new System.Drawing.Size(120, 21);
+            this.nudTimerInterval.TabIndex = 11;
+            this.nudTimerInterval.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            // 
+            // nudDays
+            // 
+            this.nudDays.Location = new System.Drawing.Point(206, 14);
+            this.nudDays.Name = "nudDays";
+            this.nudDays.Size = new System.Drawing.Size(120, 21);
+            this.nudDays.TabIndex = 10;
+            this.nudDays.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // btnSetOK
+            // 
+            this.btnSetOK.Location = new System.Drawing.Point(578, 260);
+            this.btnSetOK.Name = "btnSetOK";
+            this.btnSetOK.Size = new System.Drawing.Size(81, 37);
+            this.btnSetOK.TabIndex = 9;
+            this.btnSetOK.Text = "确定";
+            this.btnSetOK.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(96, 178);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(72, 16);
+            this.checkBox3.TabIndex = 7;
+            this.checkBox3.Text = "实时提醒";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(96, 100);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(204, 16);
+            this.checkBox2.TabIndex = 6;
+            this.checkBox2.Text = "系统启动自动检查最近的计划任务";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(106, 52);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(0, 12);
+            this.label22.TabIndex = 5;
+            this.label22.Click += new System.EventHandler(this.label22_Click);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(123, 22);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(77, 12);
+            this.label21.TabIndex = 3;
+            this.label21.Text = "提前提醒天数";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
+            // 
+            // label20
+            // 
+            this.label20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label20.Location = new System.Drawing.Point(3, 248);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(701, 2);
+            this.label20.TabIndex = 2;
+            this.label20.Text = "label20";
+            // 
+            // label18
+            // 
+            this.label18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label18.Location = new System.Drawing.Point(0, 163);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(701, 2);
+            this.label18.TabIndex = 1;
+            this.label18.Text = "label18";
+            // 
+            // label17
+            // 
+            this.label17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label17.Location = new System.Drawing.Point(1, 81);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(701, 2);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "label17";
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.ContextMenuStrip = this.stip;
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "计划提醒";
+            this.notifyIcon1.Visible = true;
+            // 
+            // stip
+            // 
+            this.stip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.stip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiOpen,
+            this.toolStripSeparator1,
+            this.tsmiExit});
+            this.stip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.stip.Name = "stip";
+            this.stip.Size = new System.Drawing.Size(125, 54);
+            this.stip.Text = "打开窗口 ";
+            // 
+            // tsmiOpen
+            // 
+            this.tsmiOpen.Name = "tsmiOpen";
+            this.tsmiOpen.Size = new System.Drawing.Size(124, 22);
+            this.tsmiOpen.Text = "打开窗口";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(121, 6);
+            // 
+            // tsmiExit
+            // 
+            this.tsmiExit.Name = "tsmiExit";
+            this.tsmiExit.Size = new System.Drawing.Size(124, 22);
+            this.tsmiExit.Text = "退出程序";
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutoPopDelay = 5000;
+            this.toolTip1.InitialDelay = 1000;
+            this.toolTip1.ReshowDelay = 100;
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip1.ToolTipTitle = "温馨提示";
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1000;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(123, 52);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(323, 12);
+            this.label25.TabIndex = 14;
+            this.label25.Text = "例如,若设置的天数为3,则提前三天每次启动计算机都会提醒";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(125, 144);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(437, 12);
+            this.label26.TabIndex = 15;
+            this.label26.Text = "如果打开此功能,则软件每次运行时都会检查最近几天计划任务,以达到提醒的效果";
+            // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.HeaderText = "序号";
@@ -946,7 +1179,6 @@
             this.DoFlag.Name = "DoFlag";
             this.DoFlag.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.DoFlag.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.DoFlag.Visible = false;
             this.DoFlag.Width = 125;
             // 
             // Explain
@@ -958,208 +1190,13 @@
             this.Explain.Visible = false;
             this.Explain.Width = 125;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label24);
-            this.panel1.Controls.Add(this.label23);
-            this.panel1.Controls.Add(this.nudTimerInterval);
-            this.panel1.Controls.Add(this.nudDays);
-            this.panel1.Controls.Add(this.btnSetOK);
-            this.panel1.Controls.Add(this.checkBox3);
-            this.panel1.Controls.Add(this.checkBox2);
-            this.panel1.Controls.Add(this.label22);
-            this.panel1.Controls.Add(this.label21);
-            this.panel1.Controls.Add(this.label20);
-            this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.label17);
-            this.panel1.Location = new System.Drawing.Point(-1, 83);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(701, 307);
-            this.panel1.TabIndex = 24;
-            // 
-            // label17
-            // 
-            this.label17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label17.Location = new System.Drawing.Point(1, 81);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(701, 2);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "label17";
-            // 
-            // label18
-            // 
-            this.label18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label18.Location = new System.Drawing.Point(0, 163);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(701, 2);
-            this.label18.TabIndex = 1;
-            this.label18.Text = "label18";
-            // 
-            // label20
-            // 
-            this.label20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label20.Location = new System.Drawing.Point(3, 248);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(701, 2);
-            this.label20.TabIndex = 2;
-            this.label20.Text = "label20";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(103, 22);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(97, 15);
-            this.label21.TabIndex = 3;
-            this.label21.Text = "提前提醒天数";
-            this.label21.Click += new System.EventHandler(this.label21_Click);
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(106, 52);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(0, 15);
-            this.label22.TabIndex = 5;
-            this.label22.Click += new System.EventHandler(this.label22_Click);
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(96, 100);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(254, 19);
-            this.checkBox2.TabIndex = 6;
-            this.checkBox2.Text = "系统启动自动检查最近的计划任务";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(96, 178);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(89, 19);
-            this.checkBox3.TabIndex = 7;
-            this.checkBox3.Text = "实时提醒";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // btnSetOK
-            // 
-            this.btnSetOK.Location = new System.Drawing.Point(578, 260);
-            this.btnSetOK.Name = "btnSetOK";
-            this.btnSetOK.Size = new System.Drawing.Size(81, 37);
-            this.btnSetOK.TabIndex = 9;
-            this.btnSetOK.Text = "确定";
-            this.btnSetOK.UseVisualStyleBackColor = true;
-            // 
-            // nudDays
-            // 
-            this.nudDays.Location = new System.Drawing.Point(206, 14);
-            this.nudDays.Name = "nudDays";
-            this.nudDays.Size = new System.Drawing.Size(120, 25);
-            this.nudDays.TabIndex = 10;
-            this.nudDays.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            // 
-            // nudTimerInterval
-            // 
-            this.nudTimerInterval.DecimalPlaces = 2;
-            this.nudTimerInterval.Location = new System.Drawing.Point(206, 208);
-            this.nudTimerInterval.Maximum = new decimal(new int[] {
-            24,
-            0,
-            0,
-            0});
-            this.nudTimerInterval.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.nudTimerInterval.Name = "nudTimerInterval";
-            this.nudTimerInterval.Size = new System.Drawing.Size(120, 25);
-            this.nudTimerInterval.TabIndex = 11;
-            this.nudTimerInterval.Value = new decimal(new int[] {
-            4,
-            0,
-            0,
-            0});
-            // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.ContextMenuStrip = this.stip;
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "计划提醒";
-            this.notifyIcon1.Visible = true;
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.AutoPopDelay = 5000;
-            this.toolTip1.InitialDelay = 1000;
-            this.toolTip1.ReshowDelay = 100;
-            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTip1.ToolTipTitle = "温馨提示";
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 1000;
-            // 
-            // stip
-            // 
-            this.stip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.stip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiOpen,
-            this.toolStripSeparator1,
-            this.tsmiExit});
-            this.stip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.stip.Name = "stip";
-            this.stip.Size = new System.Drawing.Size(139, 58);
-            this.stip.Text = "打开窗口 ";
-            // 
-            // tsmiOpen
-            // 
-            this.tsmiOpen.Name = "tsmiOpen";
-            this.tsmiOpen.Size = new System.Drawing.Size(210, 24);
-            this.tsmiOpen.Text = "打开窗口";
-            // 
-            // tsmiExit
-            // 
-            this.tsmiExit.Name = "tsmiExit";
-            this.tsmiExit.Size = new System.Drawing.Size(210, 24);
-            this.tsmiExit.Text = "退出程序";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(207, 6);
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(148, 212);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(37, 15);
-            this.label23.TabIndex = 12;
-            this.label23.Text = "每隔";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(346, 212);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(67, 15);
-            this.label24.TabIndex = 13;
-            this.label24.Text = "提醒一次";
-            // 
             // FrmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(706, 391);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelPlanStat);
             this.Controls.Add(this.panelPlanEdit);
+            this.Controls.Add(this.panelSetting);
+            this.Controls.Add(this.panelPlanStat);
             this.Controls.Add(this.panelHisSearch);
             this.Controls.Add(this.panelPlanSearch);
             this.Controls.Add(this.picStat);
@@ -1191,13 +1228,13 @@
             this.panelHisSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelPlanEdit.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPlanRegister)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDays)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPlanRegister)).EndInit();
+            this.panelSetting.ResumeLayout(false);
+            this.panelSetting.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTimerInterval)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDays)).EndInit();
             this.stip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1278,14 +1315,7 @@
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PlanTitle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PlanKind;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ExecuteTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PlanContent;
-        private System.Windows.Forms.DataGridViewComboBoxColumn DoFlag;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Explain;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelSetting;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label18;
@@ -1306,5 +1336,14 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiExit;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PlanTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PlanKind;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ExecuteTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PlanContent;
+        private System.Windows.Forms.DataGridViewComboBoxColumn DoFlag;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Explain;
     }
 }

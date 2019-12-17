@@ -17,12 +17,7 @@ namespace cshape_design
             InitializeComponent();
         }
 
-        private void picPlanSearch_Click(object sender, EventArgs e)
-        {
 
-        }
-
-  
         private void FrmMain_Load(object sender, EventArgs e)
         {
 
@@ -65,6 +60,68 @@ namespace cshape_design
 
         private void toolStripSeparator1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void dgvPlanRegister_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void picPlanSearch_MouseEnter(object sender, EventArgs e)
+        {
+            picPlanSearch.Image = (Image)Properties.Resources.ResourceManager.GetObject("计划查询1");
+        }
+
+        private void picPlanSearch_MouseLeave(object sender, EventArgs e)
+        {
+            picPlanSearch.Image = (Image)Properties.Resources.ResourceManager.GetObject("计划查询");
+        }
+        private void picStat_MouseEnter(object sender, EventArgs e)
+        {
+            picStat.Image = (Image)Properties.Resources.ResourceManager.GetObject("计划统计1");
+        }
+
+        private void picStat_MouseLeave(object sender, EventArgs e)
+        {
+            picStat.Image = (Image)Properties.Resources.ResourceManager.GetObject("计划查询");
+        }
+        private void picHisSearch_MouseEnter(object sender, EventArgs e)
+        {
+            picHisSearch.Image = (Image)Properties.Resources.ResourceManager.GetObject("历史查询1");
+        }
+
+        private void picHisSearch_MouseLeave(object sender, EventArgs e)
+        {
+            picHisSearch.Image = (Image)Properties.Resources.ResourceManager.GetObject("历史查询");
+        }
+        private void picAddPlan_MouseEnter(object sender, EventArgs e)
+        {
+            picAddPlan.Image = (Image)Properties.Resources.ResourceManager.GetObject("计划录入1");
+        }
+
+        private void picAddPlan_MouseLeave(object sender, EventArgs e)
+        {
+            picAddPlan.Image = (Image)Properties.Resources.ResourceManager.GetObject("计划录入");
+        }
+        private void picSet_MouseEnter(object sender, EventArgs e)
+        {
+            picSet.Image = (Image)Properties.Resources.ResourceManager.GetObject("提醒设置1");
+        }
+
+        private void picSet_MouseLeave(object sender, EventArgs e)
+        {
+            picSet.Image = (Image)Properties.Resources.ResourceManager.GetObject("提醒设置");
+        }
+        private void picExit_MouseEnter(object sender, EventArgs e)
+        {
+            picExit.Image = (Image)Properties.Resources.ResourceManager.GetObject("退出1");
+        }
+
+        private void picExit_MouseLeave(object sender, EventArgs e)
+        {
+            picExit.Image = (Image)Properties.Resources.ResourceManager.GetObject("退出");
+
 
         }
     }

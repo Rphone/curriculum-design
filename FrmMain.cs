@@ -124,5 +124,60 @@ namespace cshape_design
 
 
         }
+
+        private void picPlanSearch_Click(object sender, EventArgs e)
+        {
+            panelHisSearch.Visible = false;
+            panelPlanEdit.Visible = false;
+            panelPlanSearch.Visible = true;
+            panelPlanStat.Visible = false;
+            panelSetting.Visible = false;
+        }
+        private void picHisSearch_Click(object sender, EventArgs e)
+        {
+            
+        }
+        private void picSet_MouseClick(object sender, MouseEventArgs e)
+        {
+
+            panelHisSearch.Visible = false;
+            panelPlanEdit.Visible = false;
+            panelPlanSearch.Visible = false;
+            panelPlanStat.Visible = false;
+            panelSetting.Visible = true;
+        }
+
+        private void picAddPlan_Click(object sender, EventArgs e)
+        {
+
+            panelHisSearch.Visible = false;
+            panelPlanEdit.Visible = true;
+            panelPlanSearch.Visible = false;
+            panelPlanStat.Visible = false;
+            panelSetting.Visible = false;
+        }
+
+        private void picHisSearch_Click_1(object sender, EventArgs e)
+        {
+            panelHisSearch.Visible = true;
+            panelPlanEdit.Visible = false;
+            panelPlanSearch.Visible = false;
+            panelPlanStat.Visible = false;
+            panelSetting.Visible = false;
+        }
+
+        private void picStat_Click(object sender, EventArgs e)
+        {
+            panelHisSearch.Visible = false;
+            panelPlanEdit.Visible = false;
+            panelPlanSearch.Visible = false;
+            panelPlanStat.Visible = true;
+            panelSetting.Visible = false;
+        }
+
+        private void picExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

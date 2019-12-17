@@ -164,6 +164,7 @@
             this.picPlanSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picPlanSearch.TabIndex = 0;
             this.picPlanSearch.TabStop = false;
+            this.picPlanSearch.Click += new System.EventHandler(this.picPlanSearch_Click);
             this.picPlanSearch.MouseEnter += new System.EventHandler(this.picPlanSearch_MouseEnter);
             this.picPlanSearch.MouseLeave += new System.EventHandler(this.picPlanSearch_MouseLeave);
             // 
@@ -178,6 +179,7 @@
             this.picExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picExit.TabIndex = 1;
             this.picExit.TabStop = false;
+            this.picExit.Click += new System.EventHandler(this.picExit_Click);
             this.picExit.MouseEnter += new System.EventHandler(this.picExit_MouseEnter);
             this.picExit.MouseLeave += new System.EventHandler(this.picExit_MouseLeave);
             // 
@@ -192,6 +194,7 @@
             this.picSet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picSet.TabIndex = 2;
             this.picSet.TabStop = false;
+            this.picSet.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picSet_MouseClick);
             this.picSet.MouseEnter += new System.EventHandler(this.picSet_MouseEnter);
             this.picSet.MouseLeave += new System.EventHandler(this.picSet_MouseLeave);
             // 
@@ -206,6 +209,7 @@
             this.picAddPlan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picAddPlan.TabIndex = 3;
             this.picAddPlan.TabStop = false;
+            this.picAddPlan.Click += new System.EventHandler(this.picAddPlan_Click);
             this.picAddPlan.MouseEnter += new System.EventHandler(this.picAddPlan_MouseEnter);
             this.picAddPlan.MouseLeave += new System.EventHandler(this.picAddPlan_MouseLeave);
             // 
@@ -220,6 +224,7 @@
             this.picHisSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picHisSearch.TabIndex = 4;
             this.picHisSearch.TabStop = false;
+            this.picHisSearch.Click += new System.EventHandler(this.picHisSearch_Click_1);
             this.picHisSearch.MouseEnter += new System.EventHandler(this.picHisSearch_MouseEnter);
             this.picHisSearch.MouseLeave += new System.EventHandler(this.picHisSearch_MouseLeave);
             // 
@@ -234,6 +239,7 @@
             this.picStat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picStat.TabIndex = 5;
             this.picStat.TabStop = false;
+            this.picStat.Click += new System.EventHandler(this.picStat_Click);
             this.picStat.MouseEnter += new System.EventHandler(this.picStat_MouseEnter);
             this.picStat.MouseLeave += new System.EventHandler(this.picStat_MouseLeave);
             // 

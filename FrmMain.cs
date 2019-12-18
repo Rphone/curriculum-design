@@ -11,11 +11,15 @@ using System.Data.OleDb;
 using System.IO;
 using System.Threading;
 using System.Collections;
+using System.Xml;
+using System.Net;
+using System.Web;
 
 namespace cshape_design
 {
     public partial class FrmMain : Form
     {
+        //double Version = 
         public OleDbConnection old = new OleDbConnection(String.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data source={0}", Application.StartupPath + "\\PlanRemind.mdb"));
         List<CalFlag> listSource = new List<CalFlag>
         { new CalFlag { DataValue = "1", DisplayText = "是" }, new CalFlag { DataValue = "0", DisplayText = "否" } };
@@ -248,6 +252,65 @@ namespace cshape_design
         private void checkcode_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/Rphone/curriculum-design");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+          
+            XmlDocument doc = new XmlDocument();
+            XmlDocument remotedoc = new XmlDocument();
+            //下载远程的版本号文件
+            //string url = "https://raw.githubusercontent.com/Rphone/curriculum-design/master/bin/Debug/version.xml";
+            //myWebClient.DownloadFile(url, "rversion.xml");
+            try
+            {
+                doc.Load("version.xml");
+                remotedoc.Load("https://raw.githubusercontent.com/Rphone/curriculum-design/master/bin/Debug/version.xml");
+                XmlNode version = doc.SelectSingleNode("body/version");
+                XmlNode remoteversion = remotedoc.SelectSingleNode("body/version");
+                double v = Convert.ToDouble(version.InnerText);
+                double rv = Convert.ToDouble(remoteversion.InnerText);
+                string messag = "当前版本 " + version.InnerText + "\n远程版本 " + remoteversion.InnerText;
+
+                if (rv == v)
+                {
+                    messag += "\n当前已经是最新版本";
+                    MessageBox.Show(messag, "提示");
+                }
+                else if (rv > v)
+                {
+                    messag += "\n发现新的版本,是否更新?";
+                    if(MessageBox.Show(messag, "提示", MessageBoxButtons.YesNo)==DialogResult.Yes)
+                    {
+                        //MessageBox.Show(messag, "提示", MessageBoxButtons.y) == DialogResult.Yes
+                        Thread thread = new Thread(new ThreadStart(this.UpdateThread));
+                        thread.Start();
+                        MessageBox.Show("等待更新完毕后会有窗口提醒!");
+
+                    }
+                }
+               
+            }
+            catch(XmlException Xmlex)
+            {
+                MessageBox.Show("检查更新失败");
+
+            }
+            catch(WebException Webex)
+            {
+                MessageBox.Show("更新失败");
+            }
+        }
+        public void UpdateThread()
+        {   
+            WebClient myWebClient = new WebClient();
+            myWebClient.Proxy = null;
+            
+            string url = "https://github.com/Rphone/curriculum-design/raw/master/bin/Debug/cshape%20design.exe";
+            myWebClient.DownloadFile(url, "DesktopAssistant.exe");
+            MessageBox.Show("更新成功!\n请在该程序所在文件夹寻找新版程序\n并切换到新版程序使用 ");
+          
+
         }
     }
         

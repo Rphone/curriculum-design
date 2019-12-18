@@ -133,8 +133,9 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panWelcome = new System.Windows.Forms.Panel();
-            this.checkcode = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.checkcode = new System.Windows.Forms.Button();
+            this.label27 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picPlanSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSet)).BeginInit();
@@ -1206,22 +1207,13 @@
             // 
             // panWelcome
             // 
+            this.panWelcome.Controls.Add(this.label27);
             this.panWelcome.Controls.Add(this.button2);
             this.panWelcome.Controls.Add(this.checkcode);
             this.panWelcome.Location = new System.Drawing.Point(2, 91);
             this.panWelcome.Name = "panWelcome";
             this.panWelcome.Size = new System.Drawing.Size(705, 296);
             this.panWelcome.TabIndex = 24;
-            // 
-            // checkcode
-            // 
-            this.checkcode.Location = new System.Drawing.Point(143, 202);
-            this.checkcode.Name = "checkcode";
-            this.checkcode.Size = new System.Drawing.Size(92, 59);
-            this.checkcode.TabIndex = 0;
-            this.checkcode.Text = "查看源代码github";
-            this.checkcode.UseVisualStyleBackColor = true;
-            this.checkcode.Click += new System.EventHandler(this.checkcode_Click);
             // 
             // button2
             // 
@@ -1231,6 +1223,27 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "检测更新";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // checkcode
+            // 
+            this.checkcode.Location = new System.Drawing.Point(143, 202);
+            this.checkcode.Name = "checkcode";
+            this.checkcode.Size = new System.Drawing.Size(92, 59);
+            this.checkcode.TabIndex = 0;
+            this.checkcode.Text = "查看源代码GitHub";
+            this.checkcode.UseVisualStyleBackColor = true;
+            this.checkcode.Click += new System.EventHandler(this.checkcode_Click);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label27.ForeColor = System.Drawing.Color.Red;
+            this.label27.Location = new System.Drawing.Point(477, 164);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(0, 24);
+            this.label27.TabIndex = 2;
             // 
             // FrmMain
             // 
@@ -1280,6 +1293,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudDays)).EndInit();
             this.stip.ResumeLayout(false);
             this.panWelcome.ResumeLayout(false);
+            this.panWelcome.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1392,5 +1406,6 @@
         private System.Windows.Forms.Panel panWelcome;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button checkcode;
+        private System.Windows.Forms.Label label27;
     }
 }

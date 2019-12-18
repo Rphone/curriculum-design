@@ -150,6 +150,7 @@ namespace cshape_design
             panelPlanSearch.Visible = true;
             panelPlanStat.Visible = false;
             panelSetting.Visible = false;
+            panWelcome.Visible = false;
             //DataGridView中绑定数据
             DoFlag1.ConvertValueToText("DataValue", "DisplayText", listSource);//转换为是否
             chbDays.Checked = true;
@@ -162,7 +163,7 @@ namespace cshape_design
         }
         private void btn_ser_Click(object sender, EventArgs e)
         {
-            StringBuilder sb = new StringBuilder("select * from tb_plan Whewr ");//创建SQl语句
+            StringBuilder sb = new StringBuilder("select * from tb_Plan where ");//创建SQl语句
             if(chbDays.Checked)
             {
                 if(String.IsNullOrEmpty(txbPreDay.Text.Trim()))//如果天数为空
@@ -170,12 +171,23 @@ namespace cshape_design
                     MessageBox.Show("天数不能为空", "提示");
                     return;
                 }
-                
+                string strSql = "(format(ExecuteTime,'yyyy-mm-dd') >= '" +
+                DateTime.Today.ToString("yyyy-MM-dd") +
+                "' and format(ExecuteTime,'yyyy-mm-dd') <= '" +
+                DateTime.Today.AddDays(Convert.ToInt32(txbPreDay.Text)).ToString("yyyy-MM-dd") + "')";             //过滤提前天数符合查询条件的数据       
+                sb.Append(strSql);//连接查询字符串 
             }
-        }
-        private void btn_ser_MouseClick(object sender, MouseEventArgs e)
-        {
-
+            else
+            {
+                string strContentSql = " PlanContent like '%" + txb_Key.Text.Trim() + "%'";//过滤符合查询条 件的计划内容   
+                sb.Append(strContentSql);//连接查询字符串 
+            }
+            DoFlag1.ConvertValueToText("DataValue", "DisplayText", listSource);
+            OleDbDataAdapter oleDa = new OleDbDataAdapter(sb.ToString(), old);//创建OleDbDataAdapter实例 
+            DataTable dt = new DataTable();//
+            oleDa.Fill(dt);//把数据填充到DataTable实例中 
+            dgvPlanSearch.DataSource = dt;//DataGridView控件绑定数据源 
+            dgvPlanSearch.AltColor(Color.LightYellow);
         }
         private void picHisSearch_Click(object sender, EventArgs e)
         {
@@ -189,6 +201,7 @@ namespace cshape_design
             panelPlanSearch.Visible = false;
             panelPlanStat.Visible = false;
             panelSetting.Visible = true;
+            panWelcome.Visible = false;
         }
 
         private void picAddPlan_Click(object sender, EventArgs e)
@@ -199,6 +212,7 @@ namespace cshape_design
             panelPlanSearch.Visible = false;
             panelPlanStat.Visible = false;
             panelSetting.Visible = false;
+            panWelcome.Visible = false;
         }
 
         private void picHisSearch_Click_1(object sender, EventArgs e)
@@ -208,6 +222,7 @@ namespace cshape_design
             panelPlanSearch.Visible = false;
             panelPlanStat.Visible = false;
             panelSetting.Visible = false;
+            panWelcome.Visible = false;
         }
 
         private void picStat_Click(object sender, EventArgs e)
@@ -217,6 +232,7 @@ namespace cshape_design
             panelPlanSearch.Visible = false;
             panelPlanStat.Visible = true;
             panelSetting.Visible = false;
+            panWelcome.Visible = false;
         }
 
         private void picExit_Click(object sender, EventArgs e)
@@ -224,7 +240,10 @@ namespace cshape_design
             Application.Exit();
         }
 
-        
+        private void tsmiExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
         
 

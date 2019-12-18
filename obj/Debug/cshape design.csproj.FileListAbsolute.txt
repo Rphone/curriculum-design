@@ -52,3 +52,4 @@ I:\code\C#\课设2\curriculum-design\obj\Debug\cshape_design.Properties.Resource
 I:\code\C#\课设2\curriculum-design\obj\Debug\cshape design.csproj.GenerateResource.cache
 I:\code\C#\课设2\curriculum-design\obj\Debug\cshape design.exe
 I:\code\C#\课设2\curriculum-design\obj\Debug\cshape design.pdb
+I:\code\C#\课设2\curriculum-design\obj\Debug\cshape_design.Form1.resources

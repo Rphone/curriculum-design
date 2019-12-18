@@ -133,6 +133,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panWelcome = new System.Windows.Forms.Panel();
+            this.checkcode = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picPlanSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSet)).BeginInit();
@@ -152,6 +154,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudTimerInterval)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDays)).BeginInit();
             this.stip.SuspendLayout();
+            this.panWelcome.SuspendLayout();
             this.SuspendLayout();
             // 
             // picPlanSearch
@@ -1203,10 +1206,31 @@
             // 
             // panWelcome
             // 
+            this.panWelcome.Controls.Add(this.button2);
+            this.panWelcome.Controls.Add(this.checkcode);
             this.panWelcome.Location = new System.Drawing.Point(2, 91);
             this.panWelcome.Name = "panWelcome";
             this.panWelcome.Size = new System.Drawing.Size(705, 296);
             this.panWelcome.TabIndex = 24;
+            // 
+            // checkcode
+            // 
+            this.checkcode.Location = new System.Drawing.Point(143, 202);
+            this.checkcode.Name = "checkcode";
+            this.checkcode.Size = new System.Drawing.Size(92, 59);
+            this.checkcode.TabIndex = 0;
+            this.checkcode.Text = "查看源代码github";
+            this.checkcode.UseVisualStyleBackColor = true;
+            this.checkcode.Click += new System.EventHandler(this.checkcode_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(478, 202);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(92, 59);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "检测更新";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // FrmMain
             // 
@@ -1255,6 +1279,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudTimerInterval)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDays)).EndInit();
             this.stip.ResumeLayout(false);
+            this.panWelcome.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1365,5 +1390,7 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn DoFlag;
         private System.Windows.Forms.DataGridViewTextBoxColumn Explain;
         private System.Windows.Forms.Panel panWelcome;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button checkcode;
     }
 }

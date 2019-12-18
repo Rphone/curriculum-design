@@ -244,6 +244,11 @@ namespace cshape_design
         {
             Application.Exit();
         }
+
+        private void checkcode_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/Rphone/curriculum-design");
+        }
     }
         
 

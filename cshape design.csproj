@@ -183,5 +183,11 @@
   <ItemGroup>
     <None Include="Resources\setting.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\下载.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock-solid.svg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

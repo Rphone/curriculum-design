@@ -47,7 +47,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.chb = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chbDays = new System.Windows.Forms.CheckBox();
             this.dgvPlanSearch = new System.Windows.Forms.DataGridView();
             this.InvdiName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PlanTitle1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -102,7 +102,16 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.dgvPlanRegister = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PlanTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PlanKind = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExecuteTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PlanContent = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DoFlag = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Explain = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelSetting = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.nudTimerInterval = new System.Windows.Forms.NumericUpDown();
@@ -123,15 +132,6 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PlanTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PlanKind = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ExecuteTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PlanContent = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DoFlag = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Explain = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.picPlanSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSet)).BeginInit();
@@ -255,7 +255,7 @@
             this.panelPlanSearch.Controls.Add(this.label2);
             this.panelPlanSearch.Controls.Add(this.label1);
             this.panelPlanSearch.Controls.Add(this.chb);
-            this.panelPlanSearch.Controls.Add(this.checkBox1);
+            this.panelPlanSearch.Controls.Add(this.chbDays);
             this.panelPlanSearch.Controls.Add(this.dgvPlanSearch);
             this.panelPlanSearch.Location = new System.Drawing.Point(2, 96);
             this.panelPlanSearch.Margin = new System.Windows.Forms.Padding(6);
@@ -303,7 +303,7 @@
             this.btn_ser.TabIndex = 9;
             this.btn_ser.Text = "查询";
             this.btn_ser.UseVisualStyleBackColor = true;
-            this.btn_ser.Click += new System.EventHandler(this.btn_ser_Click);
+            this.btn_ser.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btn_ser_MouseClick);
             // 
             // but_cal
             // 
@@ -351,15 +351,15 @@
             this.chb.Text = "按照计划内容查询";
             this.chb.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // chbDays
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(535, 33);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(120, 16);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "按照提前天数查询";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chbDays.AutoSize = true;
+            this.chbDays.Location = new System.Drawing.Point(535, 33);
+            this.chbDays.Name = "chbDays";
+            this.chbDays.Size = new System.Drawing.Size(120, 16);
+            this.chbDays.TabIndex = 1;
+            this.chbDays.Text = "按照提前天数查询";
+            this.chbDays.UseVisualStyleBackColor = true;
             // 
             // dgvPlanSearch
             // 
@@ -609,7 +609,7 @@
             this.panelHisSearch.Controls.Add(this.label8);
             this.panelHisSearch.Controls.Add(this.label11);
             this.panelHisSearch.Controls.Add(this.dataGridView1);
-            this.panelHisSearch.Location = new System.Drawing.Point(2, 89);
+            this.panelHisSearch.Location = new System.Drawing.Point(2, 93);
             this.panelHisSearch.Margin = new System.Windows.Forms.Padding(6);
             this.panelHisSearch.Name = "panelHisSearch";
             this.panelHisSearch.Size = new System.Drawing.Size(704, 294);
@@ -770,7 +770,7 @@
             // 
             this.panelPlanEdit.Controls.Add(this.groupBox1);
             this.panelPlanEdit.Controls.Add(this.dgvPlanRegister);
-            this.panelPlanEdit.Location = new System.Drawing.Point(2, 92);
+            this.panelPlanEdit.Location = new System.Drawing.Point(3, 92);
             this.panelPlanEdit.Margin = new System.Windows.Forms.Padding(6);
             this.panelPlanEdit.Name = "panelPlanEdit";
             this.panelPlanEdit.Size = new System.Drawing.Size(704, 294);
@@ -921,6 +921,66 @@
             this.dgvPlanRegister.TabIndex = 0;
             this.dgvPlanRegister.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPlanRegister_CellContentClick);
             // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "序号";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // PlanTitle
+            // 
+            this.PlanTitle.DataPropertyName = "PlanTitle";
+            this.PlanTitle.HeaderText = "计划标题";
+            this.PlanTitle.MinimumWidth = 6;
+            this.PlanTitle.Name = "PlanTitle";
+            this.PlanTitle.Width = 125;
+            // 
+            // PlanKind
+            // 
+            this.PlanKind.DataPropertyName = "PlanKind";
+            this.PlanKind.HeaderText = "计划种类";
+            this.PlanKind.MinimumWidth = 6;
+            this.PlanKind.Name = "PlanKind";
+            this.PlanKind.Width = 125;
+            // 
+            // ExecuteTime
+            // 
+            this.ExecuteTime.DataPropertyName = "ExecuteTime";
+            this.ExecuteTime.HeaderText = "执行日期";
+            this.ExecuteTime.MinimumWidth = 6;
+            this.ExecuteTime.Name = "ExecuteTime";
+            this.ExecuteTime.Width = 125;
+            // 
+            // PlanContent
+            // 
+            this.PlanContent.DataPropertyName = "PlanContent";
+            this.PlanContent.HeaderText = "计划内容";
+            this.PlanContent.MinimumWidth = 6;
+            this.PlanContent.Name = "PlanContent";
+            this.PlanContent.Width = 125;
+            // 
+            // DoFlag
+            // 
+            this.DoFlag.DataPropertyName = "DoFlag";
+            this.DoFlag.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.DoFlag.HeaderText = "是否按期执行";
+            this.DoFlag.MinimumWidth = 6;
+            this.DoFlag.Name = "DoFlag";
+            this.DoFlag.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.DoFlag.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.DoFlag.Width = 125;
+            // 
+            // Explain
+            // 
+            this.Explain.DataPropertyName = "Explain";
+            this.Explain.HeaderText = "执行说明";
+            this.Explain.MinimumWidth = 6;
+            this.Explain.Name = "Explain";
+            this.Explain.Visible = false;
+            this.Explain.Width = 125;
+            // 
             // panelSetting
             // 
             this.panelSetting.Controls.Add(this.label26);
@@ -941,6 +1001,24 @@
             this.panelSetting.Name = "panelSetting";
             this.panelSetting.Size = new System.Drawing.Size(701, 307);
             this.panelSetting.TabIndex = 24;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(125, 144);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(437, 12);
+            this.label26.TabIndex = 15;
+            this.label26.Text = "如果打开此功能,则软件每次运行时都会检查最近几天计划任务,以达到提醒的效果";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(123, 52);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(323, 12);
+            this.label25.TabIndex = 14;
+            this.label25.Text = "例如,若设置的天数为3,则提前三天每次启动计算机都会提醒";
             // 
             // label24
             // 
@@ -1118,84 +1196,6 @@
             // 
             this.timer2.Interval = 1000;
             // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(123, 52);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(323, 12);
-            this.label25.TabIndex = 14;
-            this.label25.Text = "例如,若设置的天数为3,则提前三天每次启动计算机都会提醒";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(125, 144);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(437, 12);
-            this.label26.TabIndex = 15;
-            this.label26.Text = "如果打开此功能,则软件每次运行时都会检查最近几天计划任务,以达到提醒的效果";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "序号";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Visible = false;
-            this.dataGridViewTextBoxColumn3.Width = 125;
-            // 
-            // PlanTitle
-            // 
-            this.PlanTitle.DataPropertyName = "PlanTitle";
-            this.PlanTitle.HeaderText = "计划标题";
-            this.PlanTitle.MinimumWidth = 6;
-            this.PlanTitle.Name = "PlanTitle";
-            this.PlanTitle.Width = 125;
-            // 
-            // PlanKind
-            // 
-            this.PlanKind.DataPropertyName = "PlanKind";
-            this.PlanKind.HeaderText = "计划种类";
-            this.PlanKind.MinimumWidth = 6;
-            this.PlanKind.Name = "PlanKind";
-            this.PlanKind.Width = 125;
-            // 
-            // ExecuteTime
-            // 
-            this.ExecuteTime.DataPropertyName = "ExecuteTime";
-            this.ExecuteTime.HeaderText = "执行日期";
-            this.ExecuteTime.MinimumWidth = 6;
-            this.ExecuteTime.Name = "ExecuteTime";
-            this.ExecuteTime.Width = 125;
-            // 
-            // PlanContent
-            // 
-            this.PlanContent.DataPropertyName = "PlanContent";
-            this.PlanContent.HeaderText = "计划内容";
-            this.PlanContent.MinimumWidth = 6;
-            this.PlanContent.Name = "PlanContent";
-            this.PlanContent.Width = 125;
-            // 
-            // DoFlag
-            // 
-            this.DoFlag.DataPropertyName = "DoFlag";
-            this.DoFlag.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.DoFlag.HeaderText = "是否按期执行";
-            this.DoFlag.MinimumWidth = 6;
-            this.DoFlag.Name = "DoFlag";
-            this.DoFlag.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.DoFlag.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.DoFlag.Width = 125;
-            // 
-            // Explain
-            // 
-            this.Explain.DataPropertyName = "Explain";
-            this.Explain.HeaderText = "执行说明";
-            this.Explain.MinimumWidth = 6;
-            this.Explain.Name = "Explain";
-            this.Explain.Visible = false;
-            this.Explain.Width = 125;
-            // 
             // FrmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1263,7 +1263,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chb;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chbDays;
         private System.Windows.Forms.DataGridView dgvPlanSearch;
         private System.Windows.Forms.TextBox txb_Key;
         private System.Windows.Forms.Label label6;

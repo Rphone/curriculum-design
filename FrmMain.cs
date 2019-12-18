@@ -7,26 +7,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
+using System.IO;
+using System.Threading;
+using System.Collections;
 
 namespace cshape_design
 {
     public partial class FrmMain : Form
     {
+        public OleDbConnection old = new OleDbConnection(String.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data source={0}", Application.StartupPath + "\\PlanRemind.mdb"));
+        List<CalFlag> listSource = new List<CalFlag>
+        { new CalFlag { DataValue = "1", DisplayText = "是" }, new CalFlag { DataValue = "0", DisplayText = "否" } };
+
         public FrmMain()
         {
             InitializeComponent();
+            //链接数据
+            
         }
 
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
+            panelHisSearch.Visible = false;
+            panelPlanEdit.Visible = false;
+            panelPlanSearch.Visible = false;
+            panelPlanStat.Visible = false;
+            panelSetting.Visible = false;
 
         }
 
-        private void btn_ser_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void panelPlanStat_Paint(object sender, PaintEventArgs e)
         {
@@ -67,7 +79,9 @@ namespace cshape_design
         {
 
         }
-
+        /*
+         * 以下代码实现图标图片在鼠标上面时的图片的变换
+         */
         private void picPlanSearch_MouseEnter(object sender, EventArgs e)
         {
             picPlanSearch.Image = (Image)Properties.Resources.ResourceManager.GetObject("计划查询1");
@@ -84,7 +98,7 @@ namespace cshape_design
 
         private void picStat_MouseLeave(object sender, EventArgs e)
         {
-            picStat.Image = (Image)Properties.Resources.ResourceManager.GetObject("计划查询");
+            picStat.Image = (Image)Properties.Resources.ResourceManager.GetObject("计划统计");
         }
         private void picHisSearch_MouseEnter(object sender, EventArgs e)
         {
@@ -124,6 +138,10 @@ namespace cshape_design
 
 
         }
+        /*
+         *以下代码为点击图标时面板的切换的事件代码
+         *
+         */
 
         private void picPlanSearch_Click(object sender, EventArgs e)
         {
@@ -132,6 +150,32 @@ namespace cshape_design
             panelPlanSearch.Visible = true;
             panelPlanStat.Visible = false;
             panelSetting.Visible = false;
+            //DataGridView中绑定数据
+            DoFlag1.ConvertValueToText("DataValue", "DisplayText", listSource);//转换为是否
+            chbDays.Checked = true;
+            txb_Key.Clear();
+            OleDbDataAdapter oleda = new OleDbDataAdapter("Select Days from tb_CueSetting",old);
+            DataTable dt = new DataTable();//创建datatable实例,表示内存中的一个表
+            oleda.Fill(dt);//数据填充进入dt实例表中
+            txbPreDay.Text = Convert.ToString(dt.Rows[0][0]);//设置默认提前天数
+            btn_ser_Click(sender, e);//执行查询事件按钮
+        }
+        private void btn_ser_Click(object sender, EventArgs e)
+        {
+            StringBuilder sb = new StringBuilder("select * from tb_plan Whewr ");//创建SQl语句
+            if(chbDays.Checked)
+            {
+                if(String.IsNullOrEmpty(txbPreDay.Text.Trim()))//如果天数为空
+                {
+                    MessageBox.Show("天数不能为空", "提示");
+                    return;
+                }
+                
+            }
+        }
+        private void btn_ser_MouseClick(object sender, MouseEventArgs e)
+        {
+
         }
         private void picHisSearch_Click(object sender, EventArgs e)
         {
@@ -179,5 +223,9 @@ namespace cshape_design
         {
             Application.Exit();
         }
+
+        
     }
+        
+
 }

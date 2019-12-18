@@ -256,7 +256,6 @@ namespace cshape_design
 
         private void button2_Click(object sender, EventArgs e)
         {
-          
             XmlDocument doc = new XmlDocument();
             XmlDocument remotedoc = new XmlDocument();
             //下载远程的版本号文件
@@ -280,7 +279,7 @@ namespace cshape_design
                 else if (rv > v)
                 {
                     messag += "\n发现新的版本,是否更新?";
-                    if(MessageBox.Show(messag, "提示", MessageBoxButtons.YesNo)==DialogResult.Yes)
+                    if (MessageBox.Show(messag, "提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         //MessageBox.Show(messag, "提示", MessageBoxButtons.y) == DialogResult.Yes
                         Thread thread = new Thread(new ThreadStart(this.UpdateThread));
@@ -289,17 +288,18 @@ namespace cshape_design
 
                     }
                 }
-               
+
             }
-            catch(XmlException Xmlex)
+            catch (XmlException Xmlex)
             {
                 MessageBox.Show("检查更新失败");
 
             }
-            catch(WebException Webex)
+            catch (WebException Webex)
             {
                 MessageBox.Show("更新失败");
             }
+
         }
         public void UpdateThread()
         {   
@@ -310,6 +310,59 @@ namespace cshape_design
             myWebClient.DownloadFile(url, "DesktopAssistant.exe");
             MessageBox.Show("更新成功!\n请在该程序所在文件夹寻找新版程序\n并切换到新版程序使用 ");
           
+
+        }
+
+        private void chbDays_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbDays.Checked)
+            {
+                txbPreDay.Enabled = true;
+                chb.Checked = false;
+            }
+            else
+            {
+                txbPreDay.Enabled = false;
+            }
+        }
+
+        private void chb_CheckedChanged(object sender, EventArgs e)
+        {
+            if(chb.Checked)
+            {
+                txb_Key.Enabled = true;
+                chbDays.Checked = false;
+            }
+            else
+            {
+                txb_Key.Enabled = false;
+            }
+        }
+
+        private void but_cal_Click(object sender, EventArgs e)
+        {
+            txbPreDay.Text = "";
+            txb_Key.Text = "";
+        }
+
+        private void btnSatr_Click(object sender, EventArgs e)
+        {
+            string strsql = "";
+
+            if(rb1.Checked)
+            {
+                strsql = "select * from tb_Plan where DoFlag = '1'";
+            }
+            else
+            {
+                strsql = "select * from tb_Plan where DoFlag = '0'";
+            }
+            DoFlag2.ConvertValueToText("DataValue", "DisplayText", listSource);// 值转换  
+            OleDbDataAdapter oleDa = new OleDbDataAdapter(strsql, old); ;//创建Adapter实例
+            DataTable dt = new DataTable();//创建DataTable实例
+            oleDa.Fill(dt);//把数据添加到DataTable实例中
+            dataGridView2.DataSource = dt;//DataGridView控件绑定数据源 
+            dataGridView2.AltColor(Color.LightYellow);//在DataGridView控件中隔行换色显示记录 
 
         }
     }

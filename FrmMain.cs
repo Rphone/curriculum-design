@@ -27,7 +27,7 @@ namespace cshape_design
         public FrmMain()
         {
             InitializeComponent();
-            //链接数据
+           
             
         }
 

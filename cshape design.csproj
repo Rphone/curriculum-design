@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommClass.cs" />
+    <Compile Include="frmPlanProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlanProcess.Designer.cs">
+      <DependentUpon>frmPlanProcess.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,6 +61,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmPlanProcess.resx">
+      <DependentUpon>frmPlanProcess.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>

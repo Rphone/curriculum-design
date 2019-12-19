@@ -44,40 +44,7 @@ namespace cshape_design
 
 
 
-        private void panelPlanStat_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void rb2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label22_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripSeparator1ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void dgvPlanRegister_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -165,7 +132,7 @@ namespace cshape_design
             txbPreDay.Text = Convert.ToString(dt.Rows[0][0]);//设置默认提前天数
             btn_ser_Click(sender, e);//执行查询事件按钮
         }
-        private void btn_ser_Click(object sender, EventArgs e)
+        public void btn_ser_Click(object sender, EventArgs e)
         {
             StringBuilder sb = new StringBuilder("select * from tb_Plan where ");//创建SQl语句
             if(chbDays.Checked)
@@ -247,6 +214,7 @@ namespace cshape_design
         private void tsmiExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+            
         }
 
         private void checkcode_Click(object sender, EventArgs e)
@@ -256,27 +224,29 @@ namespace cshape_design
 
         private void button2_Click(object sender, EventArgs e)
         {
-            XmlDocument doc = new XmlDocument();
+            
             XmlDocument remotedoc = new XmlDocument();
+            string version = SystemInfo.SofewareVersion;
             //下载远程的版本号文件
             //string url = "https://raw.githubusercontent.com/Rphone/curriculum-design/master/bin/Debug/version.xml";
             //myWebClient.DownloadFile(url, "rversion.xml");
             try
             {
-                doc.Load("version.xml");
+                
                 remotedoc.Load("https://raw.githubusercontent.com/Rphone/curriculum-design/master/bin/Debug/version.xml");
-                XmlNode version = doc.SelectSingleNode("body/version");
+                
+                //remotedoc.Load("version.xml");
                 XmlNode remoteversion = remotedoc.SelectSingleNode("body/version");
-                double v = Convert.ToDouble(version.InnerText);
-                double rv = Convert.ToDouble(remoteversion.InnerText);
-                string messag = "当前版本 " + version.InnerText + "\n远程版本 " + remoteversion.InnerText;
+                //double v = Convert.ToDouble(version.InnerText);
+                string rv = remoteversion.InnerText;
+                string messag = "当前版本 " + version + "\n远程版本 " + remoteversion.InnerText;
 
-                if (rv == v)
+                if (rv == version)
                 {
                     messag += "\n当前已经是最新版本";
                     MessageBox.Show(messag, "提示");
                 }
-                else if (rv > v)
+                else
                 {
                     messag += "\n发现新的版本,是否更新?";
                     if (MessageBox.Show(messag, "提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -297,7 +267,7 @@ namespace cshape_design
             }
             catch (WebException Webex)
             {
-                MessageBox.Show("更新失败");
+                MessageBox.Show("检查更新失败,可能是网络问题");
             }
 
         }
@@ -365,6 +335,33 @@ namespace cshape_design
             dataGridView2.AltColor(Color.LightYellow);//在DataGridView控件中隔行换色显示记录 
 
         }
+
+        private void dgvPlanSearch_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvPlanSearch_MouseEnter(object sender, EventArgs e)
+        {
+            if (dgvPlanSearch.Rows.Count > 0)
+                this.toolTip1.SetToolTip(dgvPlanSearch, "双击记录编辑计划");
+        }
+
+        private void dgvPlanSearch_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.toolTip1.SetToolTip(dgvPlanSearch, "双击记录编辑计划");
+        }
+
+        private void dgvPlanSearch_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            fromPlanProcess frmDo = new fromPlanProcess();
+            frmDo.Owner = this;
+            frmDo.ShowDialog();
+        }
+    }
+    public partial class SystemInfo
+    {
+        public static string SofewareVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
     }
         
 

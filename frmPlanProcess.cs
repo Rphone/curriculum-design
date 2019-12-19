@@ -21,9 +21,9 @@ namespace cshape_design
         private void fromPlanProcess_Load(object sender, EventArgs e)
         {
             FrmMain fm = (FrmMain)this.Owner;
-            intIndivNum = Convert.ToInt32(fm.dgvPlanSearch.CurrentRow.Cells["IndivNum1"].Value);
+            intIndivNum = Convert.ToInt32(fm.dgvPlanSearch.CurrentRow.Cells["IndivNum"].Value);
             oleCon = fm.old;
-            OleDbCommand oldcom = new OleDbCommand("SELECT PlanTitle, DoFlag, Explain FROM tb_Plan where IndivNum = "
+            OleDbCommand oldcom = new OleDbCommand("SELECT PlanTitle,DoFlag,Explain FROM tb_Plan where IndivNum = "
                                     + intIndivNum, oleCon);
 
             if(oleCon.State!=ConnectionState.Open)
@@ -33,7 +33,7 @@ namespace cshape_design
             OleDbDataReader oleDr = oldcom.ExecuteReader();
 
             oleDr.Read();
-            if(oleDr.HasRows)
+            //if(oleDr.HasRows)
             {
                 
                 txtTile.Text = Convert.ToString(oleDr["PlanTitle"]);

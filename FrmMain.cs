@@ -184,6 +184,8 @@ namespace cshape_design
             panelPlanStat.Visible = false;
             panelSetting.Visible = false;
             panWelcome.Visible = false;
+
+
         }
 
         private void picHisSearch_Click_1(object sender, EventArgs e)
@@ -194,6 +196,13 @@ namespace cshape_design
             panelPlanStat.Visible = false;
             panelSetting.Visible = false;
             panWelcome.Visible = false;
+            cbxYear.Items.Clear();
+
+            for(int i=0;i<10;i++)
+            {
+                cbxYear.Items.Add(DateTime.Today.Year - i);
+            }
+            cbxYear.SelectedIndex = 0;
         }
 
         private void picStat_Click(object sender, EventArgs e)
@@ -357,6 +366,18 @@ namespace cshape_design
             fromPlanProcess frmDo = new fromPlanProcess();
             frmDo.Owner = this;
             frmDo.ShowDialog();
+        }
+
+        private void btnHisQuery_Click(object sender, EventArgs e)
+        {
+            DoFlag3.ConvertValueToText("Datavalue", "DisplayText", listSource);
+            string strSql = "select * from tb_Plan ";
+            strSql += "where year(ExecuteTime) = " + Convert.ToInt32(cbxYear.Text) + " and PlanContent like '%" + txtHisContent.Text.Trim() + "%'";//设置sql语句的过滤条件
+            OleDbDataAdapter oleda = new OleDbDataAdapter(strSql, old);
+            DataTable dt = new DataTable();
+            oleda.Fill(dt);
+            dataGridView1.DataSource = dt;
+            dataGridView1.AltColor(Color.LightYellow);
         }
     }
     public partial class SystemInfo

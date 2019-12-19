@@ -49,6 +49,13 @@
             this.chb = new System.Windows.Forms.CheckBox();
             this.chbDays = new System.Windows.Forms.CheckBox();
             this.dgvPlanSearch = new System.Windows.Forms.DataGridView();
+            this.IndivNum1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PlanTitle1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PlanKind1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExecuteTime1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PlanContent1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DoFlag1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Explain1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelPlanStat = new System.Windows.Forms.Panel();
             this.btnSatr = new System.Windows.Forms.Button();
             this.rb2 = new System.Windows.Forms.RadioButton();
@@ -129,13 +136,6 @@
             this.label27 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.checkcode = new System.Windows.Forms.Button();
-            this.IndivNum1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PlanTitle1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PlanKind1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ExecuteTime1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PlanContent1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DoFlag1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Explain1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.picPlanSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSet)).BeginInit();
@@ -395,6 +395,65 @@
             this.dgvPlanSearch.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPlanSearch_CellDoubleClick);
             this.dgvPlanSearch.MouseEnter += new System.EventHandler(this.dgvPlanSearch_MouseEnter);
             // 
+            // IndivNum1
+            // 
+            this.IndivNum1.HeaderText = "序号";
+            this.IndivNum1.MinimumWidth = 6;
+            this.IndivNum1.Name = "IndivNum1";
+            this.IndivNum1.Visible = false;
+            this.IndivNum1.Width = 125;
+            // 
+            // PlanTitle1
+            // 
+            this.PlanTitle1.DataPropertyName = "PlanTitle";
+            this.PlanTitle1.HeaderText = "计划标题";
+            this.PlanTitle1.MinimumWidth = 6;
+            this.PlanTitle1.Name = "PlanTitle1";
+            this.PlanTitle1.Width = 125;
+            // 
+            // PlanKind1
+            // 
+            this.PlanKind1.DataPropertyName = "PlanKind";
+            this.PlanKind1.HeaderText = "计划种类";
+            this.PlanKind1.MinimumWidth = 6;
+            this.PlanKind1.Name = "PlanKind1";
+            this.PlanKind1.Width = 125;
+            // 
+            // ExecuteTime1
+            // 
+            this.ExecuteTime1.DataPropertyName = "ExecuteTime";
+            this.ExecuteTime1.HeaderText = "执行日期";
+            this.ExecuteTime1.MinimumWidth = 6;
+            this.ExecuteTime1.Name = "ExecuteTime1";
+            this.ExecuteTime1.Width = 125;
+            // 
+            // PlanContent1
+            // 
+            this.PlanContent1.DataPropertyName = "PlanContent";
+            this.PlanContent1.HeaderText = "计划内容";
+            this.PlanContent1.MinimumWidth = 6;
+            this.PlanContent1.Name = "PlanContent1";
+            this.PlanContent1.Width = 125;
+            // 
+            // DoFlag1
+            // 
+            this.DoFlag1.DataPropertyName = "DoFlag";
+            this.DoFlag1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.DoFlag1.HeaderText = "是否按期执行";
+            this.DoFlag1.MinimumWidth = 6;
+            this.DoFlag1.Name = "DoFlag1";
+            this.DoFlag1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.DoFlag1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.DoFlag1.Width = 125;
+            // 
+            // Explain1
+            // 
+            this.Explain1.DataPropertyName = "Explain";
+            this.Explain1.HeaderText = "执行说明";
+            this.Explain1.MinimumWidth = 6;
+            this.Explain1.Name = "Explain1";
+            this.Explain1.Width = 125;
+            // 
             // panelPlanStat
             // 
             this.panelPlanStat.Controls.Add(this.btnSatr);
@@ -609,6 +668,7 @@
             this.btnHisQuery.TabIndex = 16;
             this.btnHisQuery.Text = "查询";
             this.btnHisQuery.UseVisualStyleBackColor = true;
+            this.btnHisQuery.Click += new System.EventHandler(this.btnHisQuery_Click);
             // 
             // label5
             // 
@@ -1189,76 +1249,17 @@
             this.checkcode.UseVisualStyleBackColor = true;
             this.checkcode.Click += new System.EventHandler(this.checkcode_Click);
             // 
-            // IndivNum1
-            // 
-            this.IndivNum1.HeaderText = "序号";
-            this.IndivNum1.MinimumWidth = 6;
-            this.IndivNum1.Name = "IndivNum1";
-            this.IndivNum1.Visible = false;
-            this.IndivNum1.Width = 125;
-            // 
-            // PlanTitle1
-            // 
-            this.PlanTitle1.DataPropertyName = "PlanTitle";
-            this.PlanTitle1.HeaderText = "计划标题";
-            this.PlanTitle1.MinimumWidth = 6;
-            this.PlanTitle1.Name = "PlanTitle1";
-            this.PlanTitle1.Width = 125;
-            // 
-            // PlanKind1
-            // 
-            this.PlanKind1.DataPropertyName = "PlanKind";
-            this.PlanKind1.HeaderText = "计划种类";
-            this.PlanKind1.MinimumWidth = 6;
-            this.PlanKind1.Name = "PlanKind1";
-            this.PlanKind1.Width = 125;
-            // 
-            // ExecuteTime1
-            // 
-            this.ExecuteTime1.DataPropertyName = "ExecuteTime";
-            this.ExecuteTime1.HeaderText = "执行日期";
-            this.ExecuteTime1.MinimumWidth = 6;
-            this.ExecuteTime1.Name = "ExecuteTime1";
-            this.ExecuteTime1.Width = 125;
-            // 
-            // PlanContent1
-            // 
-            this.PlanContent1.DataPropertyName = "PlanContent";
-            this.PlanContent1.HeaderText = "计划内容";
-            this.PlanContent1.MinimumWidth = 6;
-            this.PlanContent1.Name = "PlanContent1";
-            this.PlanContent1.Width = 125;
-            // 
-            // DoFlag1
-            // 
-            this.DoFlag1.DataPropertyName = "DoFlag";
-            this.DoFlag1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.DoFlag1.HeaderText = "是否按期执行";
-            this.DoFlag1.MinimumWidth = 6;
-            this.DoFlag1.Name = "DoFlag1";
-            this.DoFlag1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.DoFlag1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.DoFlag1.Width = 125;
-            // 
-            // Explain1
-            // 
-            this.Explain1.DataPropertyName = "Explain";
-            this.Explain1.HeaderText = "执行说明";
-            this.Explain1.MinimumWidth = 6;
-            this.Explain1.Name = "Explain1";
-            this.Explain1.Width = 125;
-            // 
             // FrmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(706, 391);
+            this.Controls.Add(this.panelPlanEdit);
+            this.Controls.Add(this.panelHisSearch);
             this.Controls.Add(this.panelPlanSearch);
             this.Controls.Add(this.panWelcome);
             this.Controls.Add(this.panelPlanStat);
-            this.Controls.Add(this.panelPlanEdit);
             this.Controls.Add(this.panelSetting);
-            this.Controls.Add(this.panelHisSearch);
             this.Controls.Add(this.picStat);
             this.Controls.Add(this.picHisSearch);
             this.Controls.Add(this.picAddPlan);

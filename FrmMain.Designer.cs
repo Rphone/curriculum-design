@@ -117,8 +117,8 @@
             this.nudTimerInterval = new System.Windows.Forms.NumericUpDown();
             this.nudDays = new System.Windows.Forms.NumericUpDown();
             this.btnSetOK = new System.Windows.Forms.Button();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.chbTimecue = new System.Windows.Forms.CheckBox();
+            this.chbAutoCheck = new System.Windows.Forms.CheckBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -199,6 +199,7 @@
             this.picSet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picSet.TabIndex = 2;
             this.picSet.TabStop = false;
+            this.picSet.Click += new System.EventHandler(this.picSet_Click);
             this.picSet.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picSet_MouseClick);
             this.picSet.MouseEnter += new System.EventHandler(this.picSet_MouseEnter);
             this.picSet.MouseLeave += new System.EventHandler(this.picSet_MouseLeave);
@@ -828,6 +829,7 @@
             this.btnSave.TabIndex = 28;
             this.btnSave.Text = "保存";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnAdd
             // 
@@ -837,6 +839,7 @@
             this.btnAdd.TabIndex = 27;
             this.btnAdd.Text = "添加";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label16
             // 
@@ -1004,8 +1007,8 @@
             this.panelSetting.Controls.Add(this.nudTimerInterval);
             this.panelSetting.Controls.Add(this.nudDays);
             this.panelSetting.Controls.Add(this.btnSetOK);
-            this.panelSetting.Controls.Add(this.checkBox3);
-            this.panelSetting.Controls.Add(this.checkBox2);
+            this.panelSetting.Controls.Add(this.chbTimecue);
+            this.panelSetting.Controls.Add(this.chbAutoCheck);
             this.panelSetting.Controls.Add(this.label22);
             this.panelSetting.Controls.Add(this.label21);
             this.panelSetting.Controls.Add(this.label20);
@@ -1039,9 +1042,9 @@
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(346, 212);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(53, 12);
+            this.label24.Size = new System.Drawing.Size(77, 12);
             this.label24.TabIndex = 13;
-            this.label24.Text = "提醒一次";
+            this.label24.Text = "小时提醒一次";
             // 
             // label23
             // 
@@ -1095,26 +1098,27 @@
             this.btnSetOK.TabIndex = 9;
             this.btnSetOK.Text = "确定";
             this.btnSetOK.UseVisualStyleBackColor = true;
+            this.btnSetOK.Click += new System.EventHandler(this.btnSetOK_Click);
             // 
-            // checkBox3
+            // chbTimecue
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(96, 178);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(72, 16);
-            this.checkBox3.TabIndex = 7;
-            this.checkBox3.Text = "实时提醒";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chbTimecue.AutoSize = true;
+            this.chbTimecue.Location = new System.Drawing.Point(96, 178);
+            this.chbTimecue.Name = "chbTimecue";
+            this.chbTimecue.Size = new System.Drawing.Size(72, 16);
+            this.chbTimecue.TabIndex = 7;
+            this.chbTimecue.Text = "实时提醒";
+            this.chbTimecue.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // chbAutoCheck
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(96, 100);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(204, 16);
-            this.checkBox2.TabIndex = 6;
-            this.checkBox2.Text = "系统启动自动检查最近的计划任务";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chbAutoCheck.AutoSize = true;
+            this.chbAutoCheck.Location = new System.Drawing.Point(96, 100);
+            this.chbAutoCheck.Name = "chbAutoCheck";
+            this.chbAutoCheck.Size = new System.Drawing.Size(204, 16);
+            this.chbAutoCheck.TabIndex = 6;
+            this.chbAutoCheck.Text = "系统启动自动检查最近的计划任务";
+            this.chbAutoCheck.UseVisualStyleBackColor = true;
             // 
             // label22
             // 
@@ -1166,6 +1170,8 @@
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "计划提醒";
             this.notifyIcon1.Visible = true;
+            this.notifyIcon1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseClick);
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
             // stip
             // 
@@ -1176,24 +1182,25 @@
             this.tsmiExit});
             this.stip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.stip.Name = "stip";
-            this.stip.Size = new System.Drawing.Size(125, 54);
+            this.stip.Size = new System.Drawing.Size(181, 76);
             this.stip.Text = "打开窗口 ";
             // 
             // tsmiOpen
             // 
             this.tsmiOpen.Name = "tsmiOpen";
-            this.tsmiOpen.Size = new System.Drawing.Size(124, 22);
+            this.tsmiOpen.Size = new System.Drawing.Size(180, 22);
             this.tsmiOpen.Text = "打开窗口";
+            this.tsmiOpen.Click += new System.EventHandler(this.tsmiOpen_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(121, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // tsmiExit
             // 
             this.tsmiExit.Name = "tsmiExit";
-            this.tsmiExit.Size = new System.Drawing.Size(124, 22);
+            this.tsmiExit.Size = new System.Drawing.Size(180, 22);
             this.tsmiExit.Text = "退出程序";
             this.tsmiExit.Click += new System.EventHandler(this.tsmiExit_Click);
             // 
@@ -1204,6 +1211,10 @@
             this.toolTip1.ReshowDelay = 100;
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip1.ToolTipTitle = "温馨提示";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // timer2
             // 
@@ -1254,12 +1265,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(706, 391);
+            this.Controls.Add(this.panelSetting);
             this.Controls.Add(this.panelPlanEdit);
             this.Controls.Add(this.panelHisSearch);
             this.Controls.Add(this.panelPlanSearch);
             this.Controls.Add(this.panWelcome);
             this.Controls.Add(this.panelPlanStat);
-            this.Controls.Add(this.panelSetting);
             this.Controls.Add(this.picStat);
             this.Controls.Add(this.picHisSearch);
             this.Controls.Add(this.picAddPlan);
@@ -1273,6 +1284,7 @@
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "桌面小助手";
+            this.Deactivate += new System.EventHandler(this.FrmMain_Deactivate);
             this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picPlanSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picExit)).EndInit();
@@ -1376,8 +1388,8 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Button btnSetOK;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox chbTimecue;
+        private System.Windows.Forms.CheckBox chbAutoCheck;
         private System.Windows.Forms.NumericUpDown nudTimerInterval;
         private System.Windows.Forms.NumericUpDown nudDays;
         private System.Windows.Forms.NotifyIcon notifyIcon1;

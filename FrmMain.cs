@@ -23,7 +23,8 @@ namespace cshape_design
         public OleDbConnection old = new OleDbConnection(String.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data source={0}", Application.StartupPath + "\\PlanRemind.mdb"));
         List<CalFlag> listSource = new List<CalFlag>
         { new CalFlag { DataValue = "1", DisplayText = "是" }, new CalFlag { DataValue = "0", DisplayText = "否" } };
-
+        bool isEdit = false;
+        OleDbDataAdapter oleDa = null;
         public FrmMain()
         {
             InitializeComponent();
@@ -40,6 +41,41 @@ namespace cshape_design
             panelPlanStat.Visible = false;
             panelSetting.Visible = false;
 
+            OleDbDataAdapter oleDaLoad = new OleDbDataAdapter("Select IsAutoCheck,Days,IsTimeCue,TimeInterval from tb_CueSetting", old);
+            DataTable dt = new DataTable();
+            oleDaLoad.Fill(dt);
+            StringBuilder sb = new StringBuilder(string.Empty);
+            if (Convert.ToBoolean(dt.Rows[0][0]))
+            {
+                sb.Append("软件启动后将自动检测未来" + dt.Rows[0][1].ToString() + "天内要执行的计划， " + Environment.NewLine);
+                picPlanSearch_Click(sender, e); //触发计划查询图片按钮的Click事件
+            }
+            if (Convert.ToBoolean(dt.Rows[0][2]))
+            {
+                timer1.Interval = Convert.ToInt32((double)dt.Rows[0][3] * 3600 * 1000); //设置触发频率
+                timer1.Enabled = true;                                                  //启动计时器,同timer1.Start()
+                sb.Append("软件每隔" + dt.Rows[0][3].ToString() + "小时会自动提醒一次！");
+            }
+            else
+            {
+                timer1.Enabled = false; //禁用计时器,同timer1.Stop()
+            }
+            if (sb.ToString() != string.Empty)
+            {
+                MessageBox.Show(sb.ToString(), "启动提示");
+            }
+
+        }
+
+
+        private void DisplayWelcomePanel()
+        {
+            panelHisSearch.Visible = false;
+            panelPlanEdit.Visible = false;
+            panelPlanSearch.Visible = false;
+            panelPlanStat.Visible = false;
+            panelSetting.Visible = false;
+            panWelcome.Visible = true;
         }
 
 
@@ -379,7 +415,229 @@ namespace cshape_design
             dataGridView1.DataSource = dt;
             dataGridView1.AltColor(Color.LightYellow);
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            isEdit = false;
+            //激活页面上的控件
+
+            txtPlanTitle.Enabled = true;
+            cbxPlanKind.Enabled = true;
+            dtpExecuteTime.Enabled = true;
+            rtbPlanContent.Enabled = true;
+
+            txtPlanTitle.Text = "";
+            cbxPlanKind.Text = "一般计划";
+            dtpExecuteTime.Value = DateTime.Today;
+            rtbPlanContent.Text = "";
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string strSql = String.Empty;                           //定义存储SQL语句的字符串
+            DataRow dr = null;                                      //定义数据行对象
+            DataTable dt = dgvPlanRegister.DataSource as DataTable; //获取数据源
+           
+            oleDa.FillSchema(dt, SchemaType.Mapped);                //配置指定的数据架构
+            string strCue = string.Empty;                           //定义提示字符串
+            if (txtPlanTitle.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("标题不许为空！"); //提示标题不许为空
+                txtPlanTitle.Focus();
+                return;
+            }
+            if (isEdit) //若是修改操作状态
+            {
+                dr = dt.Rows.Find(dgvPlanRegister.CurrentRow.Cells["IndivNum"].Value); //查找要修改的行
+                strCue = "修改";
+            }
+            else //若是新添加操作状态
+            {
+                dr = dt.NewRow(); //创建新行
+                dt.Rows.Add(dr);  //在数据源中添加新创建的行
+                strCue = "添加";
+                dr["DoFlag"] = "0";
+            }
+
+            //给数据源的各个字段赋值
+            dr["PlanTitle"] = txtPlanTitle.Text.Trim();
+            dr["PlanKind"] = cbxPlanKind.Text;
+            dr["ExecuteTime"] = dtpExecuteTime.Value;
+            dr["PlanContent"] = rtbPlanContent.Text;
+            OleDbCommandBuilder scb = new OleDbCommandBuilder(oleDa); //关联数据库表单命令
+            if (oleDa.Update(dt) > 0)                                 //更新数据
+            {
+                MessageBox.Show(strCue + "成功！"); //放空界面
+                txtPlanTitle.Text = "";             //清空标题输入框
+                cbxPlanKind.Text = "一般计划";      //初始化计划种类
+                dtpExecuteTime.Value = DateTime.Today;
+                rtbPlanContent.Text = ""; //清空内容
+                                          //禁用界面，等待下一次操作
+                txtPlanTitle.Enabled = false;
+                cbxPlanKind.Enabled = false;
+                dtpExecuteTime.Enabled = false;
+                rtbPlanContent.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show(strCue + "失败！");
+            }
+            dt.Clear();
+            oleDa.Fill(dt); //以助于更新IndivNum列
+        }
+
+        private void picSet_Click(object sender, EventArgs e)
+        {
+            //添加：检索提醒设置数据表,并显示在控件
+            OleDbDataAdapter oleDaSet = new OleDbDataAdapter("Select top 1 * from tb_CueSetting", old);
+            DataTable dt = new DataTable();
+            oleDaSet.Fill(dt);//填充数据
+            if(dt.Rows.Count >0)
+            {
+                DataRow dr = dt.Rows[0];
+                nudDays.Value = Convert.ToDecimal(dr["Days"]);//获取提前的天数
+                chbAutoCheck.Checked = Convert.ToBoolean(dr["IsAutoCheck"]);
+                chbTimecue.Checked = Convert.ToBoolean(dr["IsTimeCue"]);
+                nudTimerInterval.Value = Convert.ToDecimal(dr["TimeInterval"]);
+            }
+        }
+        /*
+         * 设置确定的按钮的事件代码
+         */
+        private void btnSetOK_Click(object sender, EventArgs e)
+        {
+            OleDbCommand olecmd = new OleDbCommand("select top 1 * from tb_CueSetting", old);
+            if(old.State!=ConnectionState.Open)
+            {
+                old.Open();
+            }
+            OleDbDataReader oledr = olecmd.ExecuteReader();
+            //定义插入SQL语句
+            string strintesql = "insert into tb_CueSetting values(" + Convert.ToInt32(nudDays.Value) + "," + chbAutoCheck.Checked + "," + chbTimecue + ","
+                +Convert.ToDouble(nudTimerInterval.Value)+")";
+
+            //定义更新SQL语句
+            string strupdatesql = "update tb_CueSetting set Days = " + Convert.ToInt32(nudDays.Value)
+            + ",IsAutoCheck = " + chbAutoCheck.Checked + " IsTimeCue = " + chbTimecue.Checked
+            + ",TimeInterval = " + Convert.ToDouble(nudTimerInterval.Value);
+            string strSql = oledr.HasRows ? strupdatesql : strintesql; //决定是要插入还是更新SQL语句
+            oledr.Close();
+            olecmd.CommandType = CommandType.Text;//设置命令类型             
+            olecmd.CommandText = strSql;//设置SQL语句             
+            if (olecmd.ExecuteNonQuery() > 0)//若执行SQL语句成功 
+            {
+                MessageBox.Show("设置成功！");
+                if (chbTimecue.Checked)
+                {
+                    timer1.Interval = Convert.ToInt32(nudTimerInterval.Value * 3600 * 1000);//设置 Timer控件的触发频率                     
+                    timer1.Enabled = true;//启动计时器                 
+                }
+                else
+                {
+                    timer1.Enabled = false;//禁用计时器 
+                }
+            }
+            else
+            {
+                MessageBox.Show("设置失败!");
+            }
+            old.Close();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //创建一个新的子线程，用于检索和提示数据，以减轻主线程的压力             
+            Thread th = new Thread(
+                () =>
+                {
+                    Invoke(
+                        (MethodInvoker)(() => 
+                        {
+
+                            int intDays;//存储提前天数                             
+                            OleDbDataAdapter oleDaTime = new OleDbDataAdapter("Select Days from tb_CueSetting", old);//创建OleDbDataAdapter实例，读取提前天数                             
+                            DataTable dt = new DataTable();//创建DataTable实例                             
+                            oleDaTime.Fill(dt);//把数据写入DataTable实例中                             
+                            intDays = Convert.ToInt32(dt.Rows[0][0]);//获取提前天数                             
+                                                                     //读取需要提醒的计划                             
+                            StringBuilder sb = new StringBuilder(" Select PlanTitle from tb_Plan Where ");//创建动态字符串 
+                            string strSql = " DoFlag = '0' and   (format(ExecuteTime,'yyyy-mm-dd') >= '" + DateTime.Today.ToString("yyyy-MM-dd") + "' and format(ExecuteTime,'yyyy-mm-dd') <= '" + DateTime.Today.AddDays(intDays).ToString("yyyy-MM-dd") + "')";//过滤日期符合查询条件的记录 
+                            sb.Append(strSql);
+                            oleDaTime = new OleDbDataAdapter(sb.ToString(), old);//得到新的 OleDbDataAdapter实例   
+                            oleDaTime.Fill(dt);//把数据写入DataTable实例中 
+                            sb.Clear();//清空动态字符串
+                             foreach (DataRow dr in dt.Rows)//遍历数据行                             
+                            {                                 
+                                sb.Append(dr["PlanTitle"].ToString() + Environment.NewLine);//追加字 符串                            
+                             }
+                            if (!String.IsNullOrEmpty(sb.ToString().Trim())) //若存在相应记录
+                            {
+                                string strTemp = string.Empty;
+                                if (intDays == 0)
+                                {
+                                    strTemp = "今天有以下未执行的计划任务:";
+                                }
+                                else
+                                {
+                                    strTemp = "未来" + intDays + "天内有以下未执行的计划任务:";
+                                }
+                                this.notifyIcon1.ShowBalloonTip(1000, "计划提示：", strTemp + sb.ToString() + "详细情况请单击托盘图标！", ToolTipIcon.Info);
+                            }
+                            else //若不存在对应的记录
+                            {
+                                string strTemp = string.Empty;
+                                if (intDays == 0)
+                                {
+                                    strTemp = "今天无未执行的计划任务:";
+                                }
+                                else
+                                {
+                                    strTemp = "未来" + intDays + "天内无未执行的计划任务:";
+                                }
+                                this.notifyIcon1.ShowBalloonTip(1000, "计划提示：", strTemp + "\n详 细情况请单击托盘图标！", ToolTipIcon.Info);
+                            }
+                        }));
+                });
+            th.IsBackground = true; //设置新的子线程在后台执行
+            th.Start();             //启动新的子线程
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
+        {
+           
+            
+                if (e.Button == System.Windows.Forms.MouseButtons.Left) //当点击的是鼠标左键
+                {
+                    this.Show();
+                    this.WindowState = FormWindowState.Normal;
+                //picPlanSearch_Click(sender, e); //调用计划查询图片框的点击事件
+
+                    DisplayWelcomePanel();
+                }
+
+        }
+
+        private void FrmMain_Deactivate(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)  //监控到窗体被最小化时             
+            {                 
+                this.Hide();  //隐藏窗体            
+            }   
+        }
+
+        private void tsmiOpen_Click(object sender, EventArgs e)
+        {
+            this.Show();
+            this.WindowState = FormWindowState.Normal;
+            DisplayWelcomePanel();
+        }
     }
+
     public partial class SystemInfo
     {
         public static string SofewareVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();

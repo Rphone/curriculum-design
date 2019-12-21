@@ -228,5 +228,11 @@
   <ItemGroup>
     <None Include="Resources\work_schedule_128px_1208240_easyicon.net.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\闹钟.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\闹钟2.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

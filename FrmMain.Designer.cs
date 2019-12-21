@@ -820,6 +820,7 @@
             this.btnDel.TabIndex = 29;
             this.btnDel.Text = "删除";
             this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnSave
             // 
@@ -936,6 +937,7 @@
             this.dgvPlanRegister.ShowRowErrors = false;
             this.dgvPlanRegister.Size = new System.Drawing.Size(499, 291);
             this.dgvPlanRegister.TabIndex = 0;
+            this.dgvPlanRegister.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPlanRegister_CellClick);
             this.dgvPlanRegister.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPlanRegister_CellContentClick);
             // 
             // dataGridViewTextBoxColumn3
@@ -1182,25 +1184,25 @@
             this.tsmiExit});
             this.stip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.stip.Name = "stip";
-            this.stip.Size = new System.Drawing.Size(181, 76);
+            this.stip.Size = new System.Drawing.Size(125, 54);
             this.stip.Text = "打开窗口 ";
             // 
             // tsmiOpen
             // 
             this.tsmiOpen.Name = "tsmiOpen";
-            this.tsmiOpen.Size = new System.Drawing.Size(180, 22);
+            this.tsmiOpen.Size = new System.Drawing.Size(124, 22);
             this.tsmiOpen.Text = "打开窗口";
             this.tsmiOpen.Click += new System.EventHandler(this.tsmiOpen_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(121, 6);
             // 
             // tsmiExit
             // 
             this.tsmiExit.Name = "tsmiExit";
-            this.tsmiExit.Size = new System.Drawing.Size(180, 22);
+            this.tsmiExit.Size = new System.Drawing.Size(124, 22);
             this.tsmiExit.Text = "退出程序";
             this.tsmiExit.Click += new System.EventHandler(this.tsmiExit_Click);
             // 
@@ -1267,8 +1269,8 @@
             this.ClientSize = new System.Drawing.Size(706, 391);
             this.Controls.Add(this.panelSetting);
             this.Controls.Add(this.panelPlanEdit);
-            this.Controls.Add(this.panelHisSearch);
             this.Controls.Add(this.panelPlanSearch);
+            this.Controls.Add(this.panelHisSearch);
             this.Controls.Add(this.panWelcome);
             this.Controls.Add(this.panelPlanStat);
             this.Controls.Add(this.picStat);

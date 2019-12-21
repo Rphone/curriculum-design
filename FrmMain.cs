@@ -24,7 +24,7 @@ namespace cshape_design
         List<CalFlag> listSource = new List<CalFlag>
         { new CalFlag { DataValue = "1", DisplayText = "是" }, new CalFlag { DataValue = "0", DisplayText = "否" } };
         bool isEdit = false;
-        OleDbDataAdapter oleDa = null;
+        OleDbDataAdapter oleda = null;
         public FrmMain()
         {
             InitializeComponent();
@@ -48,7 +48,8 @@ namespace cshape_design
             if (Convert.ToBoolean(dt.Rows[0][0]))
             {
                 sb.Append("软件启动后将自动检测未来" + dt.Rows[0][1].ToString() + "天内要执行的计划， " + Environment.NewLine);
-                picPlanSearch_Click(sender, e); //触发计划查询图片按钮的Click事件
+                //picPlanSearch_Click(sender, e); //触发计划查询图片按钮的Click事件
+                DisplayWelcomePanel();
             }
             if (Convert.ToBoolean(dt.Rows[0][2]))
             {
@@ -162,7 +163,8 @@ namespace cshape_design
             DoFlag1.ConvertValueToText("DataValue", "DisplayText", listSource);//转换为是否
             chbDays.Checked = true;
             txb_Key.Clear();
-            OleDbDataAdapter oleda = new OleDbDataAdapter("Select Days from tb_CueSetting",old);
+            //oleda = new OleDbDataAdapter("Select Days from tb_CueSetting",old);
+            oleda = new OleDbDataAdapter("Select Days from tb_CueSetting",old);
             DataTable dt = new DataTable();//创建datatable实例,表示内存中的一个表
             oleda.Fill(dt);//数据填充进入dt实例表中
             txbPreDay.Text = Convert.ToString(dt.Rows[0][0]);//设置默认提前天数
@@ -190,9 +192,9 @@ namespace cshape_design
                 sb.Append(strContentSql);//连接查询字符串 
             }
             DoFlag1.ConvertValueToText("DataValue", "DisplayText", listSource);
-            OleDbDataAdapter oleDa = new OleDbDataAdapter(sb.ToString(), old);//创建OleDbDataAdapter实例 
+            oleda = new OleDbDataAdapter(sb.ToString(), old);//创建OleDbDataAdapter实例 
             DataTable dt = new DataTable();//
-            oleDa.Fill(dt);//把数据填充到DataTable实例中 
+            oleda.Fill(dt);//把数据填充到DataTable实例中 
             dgvPlanSearch.DataSource = dt;//DataGridView控件绑定数据源 
             dgvPlanSearch.AltColor(Color.LightYellow);
         }
@@ -220,7 +222,11 @@ namespace cshape_design
             panelPlanStat.Visible = false;
             panelSetting.Visible = false;
             panWelcome.Visible = false;
-
+            oleda = new OleDbDataAdapter("select * from tb_Plan", old);
+            DataTable dt = new DataTable();
+            oleda.Fill(dt);
+            dgvPlanRegister.DataSource = dt;
+            dgvPlanRegister.AltColor(Color.LightYellow);
 
         }
 
@@ -373,9 +379,9 @@ namespace cshape_design
                 strsql = "select * from tb_Plan where DoFlag = '0'";
             }
             DoFlag2.ConvertValueToText("DataValue", "DisplayText", listSource);// 值转换  
-            OleDbDataAdapter oleDa = new OleDbDataAdapter(strsql, old); ;//创建Adapter实例
+            oleda = new OleDbDataAdapter(strsql, old); ;//创建Adapter实例
             DataTable dt = new DataTable();//创建DataTable实例
-            oleDa.Fill(dt);//把数据添加到DataTable实例中
+            oleda.Fill(dt);//把数据添加到DataTable实例中
             dataGridView2.DataSource = dt;//DataGridView控件绑定数据源 
             dataGridView2.AltColor(Color.LightYellow);//在DataGridView控件中隔行换色显示记录 
 
@@ -409,7 +415,7 @@ namespace cshape_design
             DoFlag3.ConvertValueToText("Datavalue", "DisplayText", listSource);
             string strSql = "select * from tb_Plan ";
             strSql += "where year(ExecuteTime) = " + Convert.ToInt32(cbxYear.Text) + " and PlanContent like '%" + txtHisContent.Text.Trim() + "%'";//设置sql语句的过滤条件
-            OleDbDataAdapter oleda = new OleDbDataAdapter(strSql, old);
+            oleda = new OleDbDataAdapter(strSql, old);
             DataTable dt = new DataTable();
             oleda.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -434,11 +440,13 @@ namespace cshape_design
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string strSql = String.Empty;                           //定义存储SQL语句的字符串
+             string strSql = String.Empty;                           //定义存储SQL语句的字符串
             DataRow dr = null;                                      //定义数据行对象
-            DataTable dt = dgvPlanRegister.DataSource as DataTable; //获取数据源
-           
-            oleDa.FillSchema(dt, SchemaType.Mapped);                //配置指定的数据架构
+            DataTable dt = (DataTable)dgvPlanRegister.DataSource; //获取数据源
+            
+
+
+            oleda.FillSchema(dt, SchemaType.Mapped);                //配置指定的数据架构
             string strCue = string.Empty;                           //定义提示字符串
             if (txtPlanTitle.Text.Trim() == string.Empty)
             {
@@ -464,8 +472,8 @@ namespace cshape_design
             dr["PlanKind"] = cbxPlanKind.Text;
             dr["ExecuteTime"] = dtpExecuteTime.Value;
             dr["PlanContent"] = rtbPlanContent.Text;
-            OleDbCommandBuilder scb = new OleDbCommandBuilder(oleDa); //关联数据库表单命令
-            if (oleDa.Update(dt) > 0)                                 //更新数据
+            OleDbCommandBuilder scb = new OleDbCommandBuilder(oleda); //关联数据库表单命令
+            if (oleda.Update(dt) > 0)                                 //更新数据
             {
                 MessageBox.Show(strCue + "成功！"); //放空界面
                 txtPlanTitle.Text = "";             //清空标题输入框
@@ -483,7 +491,7 @@ namespace cshape_design
                 MessageBox.Show(strCue + "失败！");
             }
             dt.Clear();
-            oleDa.Fill(dt); //以助于更新IndivNum列
+            oleda.Fill(dt); //以助于更新IndivNum列
         }
 
         private void picSet_Click(object sender, EventArgs e)
@@ -513,14 +521,18 @@ namespace cshape_design
             }
             OleDbDataReader oledr = olecmd.ExecuteReader();
             //定义插入SQL语句
-            string strintesql = "insert into tb_CueSetting values(" + Convert.ToInt32(nudDays.Value) + "," + chbAutoCheck.Checked + "," + chbTimecue + ","
-                +Convert.ToDouble(nudTimerInterval.Value)+")";
+            // string strintesql = "insert into tb_CueSetting values(" + Convert.ToInt32(nudDays.Value) + "," + chbAutoCheck.Checked + "," + chbTimecue + ","
+            //    +Convert.ToDouble(nudTimerInterval.Value)+")";
 
             //定义更新SQL语句
-            string strupdatesql = "update tb_CueSetting set Days = " + Convert.ToInt32(nudDays.Value)
-            + ",IsAutoCheck = " + chbAutoCheck.Checked + " IsTimeCue = " + chbTimecue.Checked
-            + ",TimeInterval = " + Convert.ToDouble(nudTimerInterval.Value);
-            string strSql = oledr.HasRows ? strupdatesql : strintesql; //决定是要插入还是更新SQL语句
+            // string strupdatesql = "update tb_CueSetting set Days = " + Convert.ToInt32(nudDays.Value)
+            // + ",IsAutoCheck = " + chbAutoCheck.Checked + " IsTimeCue = " + chbTimecue.Checked
+            // + ",TimeInterval = " + Convert.ToDouble(nudTimerInterval.Value);
+            // string strSql = oledr.HasRows ? strupdatesql : strintesql; //决定是要插入还是更新SQL语句
+
+            string strInsertSql = "INSERT INTO tb_CueSetting VALUES(" + Convert.ToInt32(nudDays.Value) + "," + chbAutoCheck.Checked + "," + chbTimecue.Checked + "," + Convert.ToDouble(nudTimerInterval.Value) + ")";             //定义更新SQL语句             
+            string strUpdateSql = "UPDATE tb_CueSetting set Days = " + Convert.ToInt32(nudDays.Value) + ",IsAutoCheck = " + chbAutoCheck.Checked + ",IsTimeCue = " + chbTimecue.Checked + ",TimeInterval = " + Convert.ToDouble(nudTimerInterval.Value);            //获取本次要执行的SQL语句             
+            string strSql = oledr.HasRows ? strUpdateSql : strInsertSql;
             oledr.Close();
             olecmd.CommandType = CommandType.Text;//设置命令类型             
             olecmd.CommandText = strSql;//设置SQL语句             
@@ -635,6 +647,71 @@ namespace cshape_design
             this.Show();
             this.WindowState = FormWindowState.Normal;
             DisplayWelcomePanel();
+        }
+
+        private void dgvPlanRegister_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            isEdit = true; //处于修改状态
+                           //激活当前界面上的控件
+            txtPlanTitle.Enabled = true;
+            cbxPlanKind.Enabled = true;
+            dtpExecuteTime.Enabled = true;
+            rtbPlanContent.Enabled = true; //将数据表中点击行的记录放到四个控件中
+            txtPlanTitle.Text = Convert.ToString(dgvPlanRegister.CurrentRow.Cells["PlanTitle"].Value);
+            cbxPlanKind.Text = Convert.ToString(dgvPlanRegister.CurrentRow.Cells["PlanKind"].Value);
+
+            dtpExecuteTime.Value = Convert.ToDateTime(dgvPlanRegister.CurrentRow.Cells["ExecuteTime"].Value);
+            rtbPlanContent.Text = Convert.ToString(dgvPlanRegister.CurrentRow.Cells["PlanContent"].Value);
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            if (dgvPlanRegister.CurrentRow != null) //若当前行不为空
+            {                                       //若确定要删除
+                if (MessageBox.Show("确定要删除吗？", "软件提示", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                {
+                    DataTable dt = dgvPlanRegister.DataSource as DataTable;                                //获取数据源
+                    oleda.FillSchema(dt, SchemaType.Mapped);                                               //配置指定的数据架构
+                    int intIndivNum = Convert.ToInt32(dgvPlanRegister.CurrentRow.Cells["IndivNum"].Value); //获取人员唯一编号
+                    DataRow dr = dt.Rows.Find(intIndivNum);                                                //查找指定数据行
+                    dr.Delete();                                                                           //删除数据行
+                    OleDbCommandBuilder scb = new OleDbCommandBuilder(oleda);                              //关联数据库表单命令
+                    try
+                    {
+                        if (oleda.Update(dt) > 0) //提交数据
+                        {
+                            if (old.State != ConnectionState.Open) //弱连接为打开
+                            {
+                                old.Open(); //打开连接
+                            }
+                            MessageBox.Show("删除成功！"); //放空界面
+                            txtPlanTitle.Text = "";        //清空标题输入框
+                            cbxPlanKind.Text = "一般计划"; //初始化计划种类
+                            dtpExecuteTime.Value = DateTime.Today;
+                            rtbPlanContent.Text = ""; //清空内容                 //禁用界面，等待下一次操作
+                            txtPlanTitle.Enabled = false;
+                            cbxPlanKind.Enabled = false;
+                            dtpExecuteTime.Enabled = false;
+                            rtbPlanContent.Enabled = false;
+                        }
+                        else //若删除失败
+                        {
+                            MessageBox.Show("删除失败！");
+                        }
+                    }
+                    catch (Exception ex) //处理异常
+                    {
+                        MessageBox.Show(ex.Message, "软件提示");
+                    }
+                    finally //finally语句
+                    {
+                        if (old.State == ConnectionState.Open) //若连接打开
+                        {
+                            old.Close(); //关闭连接
+                        }
+                    }
+                }
+            }
         }
     }
 

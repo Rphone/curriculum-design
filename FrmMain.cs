@@ -89,7 +89,7 @@ namespace cshape_design
         }
         /*
          * 以下代码实现图标图片在鼠标上面时的图片的变换
-         */
+         
         private void picPlanSearch_MouseEnter(object sender, EventArgs e)
         {
             picPlanSearch.Image = (Image)Properties.Resources.ResourceManager.GetObject("计划查询1");
@@ -146,6 +146,7 @@ namespace cshape_design
 
 
         }
+        */
         /*
          *以下代码为点击图标时面板的切换的事件代码
          *
@@ -712,6 +713,21 @@ namespace cshape_design
                     }
                 }
             }
+        }
+
+        private void label29_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label31_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 检查更新ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            button2_Click(sender,e);
         }
     }
 

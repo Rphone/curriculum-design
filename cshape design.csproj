@@ -234,5 +234,62 @@
   <ItemGroup>
     <None Include="Resources\闹钟2.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_513px_1236227_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stats_1235px_1206227_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_755px_1229797_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_783px_1230635_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history_783px_1233354_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_783px_1226768_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_69.891213389121px_1226768_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_104.83682008368px_1226768_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_78.627615062762px_1226768_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history_82.421052631579px_1233354_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_59.0976px_1236227_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stats_90.457782299084px_1206227_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_78.518105849582px_1230635_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_69.514066496164px_1229797_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\计划查询new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\设置new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\计划录入new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\历史查询new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\计划统计new.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -110,6 +110,7 @@
             this.DoFlag = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Explain = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelSetting = new System.Windows.Forms.Panel();
+            this.label32 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -128,6 +129,7 @@
             this.stip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.检查更新ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -136,6 +138,10 @@
             this.label27 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.checkcode = new System.Windows.Forms.Button();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picPlanSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSet)).BeginInit();
@@ -161,93 +167,81 @@
             // picPlanSearch
             // 
             this.picPlanSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picPlanSearch.Image = global::cshape_design.Properties.Resources.计划查询;
-            this.picPlanSearch.Location = new System.Drawing.Point(12, 3);
+            this.picPlanSearch.Image = ((System.Drawing.Image)(resources.GetObject("picPlanSearch.Image")));
+            this.picPlanSearch.InitialImage = global::cshape_design.Properties.Resources.search_783px_1230635_easyicon_net;
+            this.picPlanSearch.Location = new System.Drawing.Point(13, 1);
             this.picPlanSearch.Margin = new System.Windows.Forms.Padding(4);
             this.picPlanSearch.Name = "picPlanSearch";
-            this.picPlanSearch.Size = new System.Drawing.Size(114, 82);
-            this.picPlanSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picPlanSearch.Size = new System.Drawing.Size(105, 82);
+            this.picPlanSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picPlanSearch.TabIndex = 0;
             this.picPlanSearch.TabStop = false;
             this.picPlanSearch.Click += new System.EventHandler(this.picPlanSearch_Click);
-            this.picPlanSearch.MouseEnter += new System.EventHandler(this.picPlanSearch_MouseEnter);
-            this.picPlanSearch.MouseLeave += new System.EventHandler(this.picPlanSearch_MouseLeave);
             // 
             // picExit
             // 
             this.picExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picExit.Image = global::cshape_design.Properties.Resources.退出;
-            this.picExit.Location = new System.Drawing.Point(574, 3);
+            this.picExit.Image = global::cshape_design.Properties.Resources.exit_78_627615062762px_1226768_easyicon_net;
+            this.picExit.Location = new System.Drawing.Point(559, 3);
             this.picExit.Margin = new System.Windows.Forms.Padding(4);
             this.picExit.Name = "picExit";
-            this.picExit.Size = new System.Drawing.Size(112, 82);
-            this.picExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picExit.Size = new System.Drawing.Size(98, 77);
             this.picExit.TabIndex = 1;
             this.picExit.TabStop = false;
             this.picExit.Click += new System.EventHandler(this.picExit_Click);
-            this.picExit.MouseEnter += new System.EventHandler(this.picExit_MouseEnter);
-            this.picExit.MouseLeave += new System.EventHandler(this.picExit_MouseLeave);
             // 
             // picSet
             // 
             this.picSet.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picSet.Image = global::cshape_design.Properties.Resources.提醒设置;
-            this.picSet.Location = new System.Drawing.Point(462, 3);
+            this.picSet.Image = global::cshape_design.Properties.Resources.设置new;
+            this.picSet.Location = new System.Drawing.Point(460, 3);
             this.picSet.Margin = new System.Windows.Forms.Padding(4);
             this.picSet.Name = "picSet";
-            this.picSet.Size = new System.Drawing.Size(112, 82);
-            this.picSet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picSet.Size = new System.Drawing.Size(91, 77);
+            this.picSet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picSet.TabIndex = 2;
             this.picSet.TabStop = false;
             this.picSet.Click += new System.EventHandler(this.picSet_Click);
             this.picSet.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picSet_MouseClick);
-            this.picSet.MouseEnter += new System.EventHandler(this.picSet_MouseEnter);
-            this.picSet.MouseLeave += new System.EventHandler(this.picSet_MouseLeave);
             // 
             // picAddPlan
             // 
             this.picAddPlan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picAddPlan.Image = global::cshape_design.Properties.Resources.计划录入;
+            this.picAddPlan.Image = global::cshape_design.Properties.Resources.计划录入new;
             this.picAddPlan.Location = new System.Drawing.Point(348, 3);
             this.picAddPlan.Margin = new System.Windows.Forms.Padding(4);
             this.picAddPlan.Name = "picAddPlan";
-            this.picAddPlan.Size = new System.Drawing.Size(114, 82);
-            this.picAddPlan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picAddPlan.Size = new System.Drawing.Size(104, 77);
+            this.picAddPlan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAddPlan.TabIndex = 3;
             this.picAddPlan.TabStop = false;
             this.picAddPlan.Click += new System.EventHandler(this.picAddPlan_Click);
-            this.picAddPlan.MouseEnter += new System.EventHandler(this.picAddPlan_MouseEnter);
-            this.picAddPlan.MouseLeave += new System.EventHandler(this.picAddPlan_MouseLeave);
             // 
             // picHisSearch
             // 
             this.picHisSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picHisSearch.Image = global::cshape_design.Properties.Resources.历史查询;
+            this.picHisSearch.Image = global::cshape_design.Properties.Resources.历史查询new;
             this.picHisSearch.Location = new System.Drawing.Point(236, 3);
             this.picHisSearch.Margin = new System.Windows.Forms.Padding(4);
             this.picHisSearch.Name = "picHisSearch";
-            this.picHisSearch.Size = new System.Drawing.Size(113, 82);
-            this.picHisSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picHisSearch.Size = new System.Drawing.Size(104, 77);
+            this.picHisSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picHisSearch.TabIndex = 4;
             this.picHisSearch.TabStop = false;
             this.picHisSearch.Click += new System.EventHandler(this.picHisSearch_Click_1);
-            this.picHisSearch.MouseEnter += new System.EventHandler(this.picHisSearch_MouseEnter);
-            this.picHisSearch.MouseLeave += new System.EventHandler(this.picHisSearch_MouseLeave);
             // 
             // picStat
             // 
             this.picStat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picStat.Image = global::cshape_design.Properties.Resources.计划统计;
+            this.picStat.Image = global::cshape_design.Properties.Resources.计划统计new;
             this.picStat.Location = new System.Drawing.Point(126, 3);
             this.picStat.Margin = new System.Windows.Forms.Padding(4);
             this.picStat.Name = "picStat";
-            this.picStat.Size = new System.Drawing.Size(111, 82);
-            this.picStat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picStat.Size = new System.Drawing.Size(102, 80);
+            this.picStat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picStat.TabIndex = 5;
             this.picStat.TabStop = false;
             this.picStat.Click += new System.EventHandler(this.picStat_Click);
-            this.picStat.MouseEnter += new System.EventHandler(this.picStat_MouseEnter);
-            this.picStat.MouseLeave += new System.EventHandler(this.picStat_MouseLeave);
             // 
             // panelPlanSearch
             // 
@@ -1002,6 +996,7 @@
             // 
             // panelSetting
             // 
+            this.panelSetting.Controls.Add(this.label32);
             this.panelSetting.Controls.Add(this.label26);
             this.panelSetting.Controls.Add(this.label25);
             this.panelSetting.Controls.Add(this.label24);
@@ -1020,6 +1015,15 @@
             this.panelSetting.Name = "panelSetting";
             this.panelSetting.Size = new System.Drawing.Size(701, 307);
             this.panelSetting.TabIndex = 24;
+            // 
+            // label32
+            // 
+            this.label32.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label32.Location = new System.Drawing.Point(549, -80);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(10, 82);
+            this.label32.TabIndex = 29;
+            this.label32.Text = "label32";
             // 
             // label26
             // 
@@ -1181,10 +1185,11 @@
             this.stip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiOpen,
             this.toolStripSeparator1,
+            this.检查更新ToolStripMenuItem,
             this.tsmiExit});
             this.stip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.stip.Name = "stip";
-            this.stip.Size = new System.Drawing.Size(125, 54);
+            this.stip.Size = new System.Drawing.Size(125, 76);
             this.stip.Text = "打开窗口 ";
             // 
             // tsmiOpen
@@ -1198,6 +1203,13 @@
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(121, 6);
+            // 
+            // 检查更新ToolStripMenuItem
+            // 
+            this.检查更新ToolStripMenuItem.Name = "检查更新ToolStripMenuItem";
+            this.检查更新ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.检查更新ToolStripMenuItem.Text = "检查更新";
+            this.检查更新ToolStripMenuItem.Click += new System.EventHandler(this.检查更新ToolStripMenuItem_Click);
             // 
             // tsmiExit
             // 
@@ -1262,16 +1274,58 @@
             this.checkcode.UseVisualStyleBackColor = true;
             this.checkcode.Click += new System.EventHandler(this.checkcode_Click);
             // 
+            // label28
+            // 
+            this.label28.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label28.Location = new System.Drawing.Point(119, -1);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(2, 85);
+            this.label28.TabIndex = 25;
+            this.label28.Text = "label28";
+            // 
+            // label29
+            // 
+            this.label29.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label29.Location = new System.Drawing.Point(336, -1);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(2, 81);
+            this.label29.TabIndex = 26;
+            this.label29.Text = "label29";
+            this.label29.Click += new System.EventHandler(this.label29_Click);
+            // 
+            // label30
+            // 
+            this.label30.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label30.Location = new System.Drawing.Point(227, -5);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(2, 88);
+            this.label30.TabIndex = 27;
+            this.label30.Text = "label30";
+            // 
+            // label31
+            // 
+            this.label31.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label31.Location = new System.Drawing.Point(459, -8);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(2, 86);
+            this.label31.TabIndex = 28;
+            this.label31.Text = "label31";
+            this.label31.Click += new System.EventHandler(this.label31_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(706, 391);
+            this.Controls.Add(this.panWelcome);
+            this.Controls.Add(this.label31);
+            this.Controls.Add(this.label30);
+            this.Controls.Add(this.label29);
+            this.Controls.Add(this.label28);
             this.Controls.Add(this.panelSetting);
             this.Controls.Add(this.panelPlanEdit);
             this.Controls.Add(this.panelPlanSearch);
             this.Controls.Add(this.panelHisSearch);
-            this.Controls.Add(this.panWelcome);
             this.Controls.Add(this.panelPlanStat);
             this.Controls.Add(this.picStat);
             this.Controls.Add(this.picHisSearch);
@@ -1315,7 +1369,6 @@
             this.panWelcome.ResumeLayout(false);
             this.panWelcome.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1427,5 +1480,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PlanContent1;
         private System.Windows.Forms.DataGridViewComboBoxColumn DoFlag1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Explain1;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.ToolStripMenuItem 检查更新ToolStripMenuItem;
     }
 }

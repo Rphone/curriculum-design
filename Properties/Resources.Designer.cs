@@ -103,6 +103,36 @@ namespace cshape_design.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap exit_78_627615062762px_1226768_easyicon_net {
+            get {
+                object obj = ResourceManager.GetObject("exit_78_627615062762px_1226768_easyicon_net", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap history_783px_1233354_easyicon_net {
+            get {
+                object obj = ResourceManager.GetObject("history_783px_1233354_easyicon_net", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap history_82_421052631579px_1233354_easyicon_net {
+            get {
+                object obj = ResourceManager.GetObject("history_82_421052631579px_1233354_easyicon_net", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap left {
             get {
                 object obj = ResourceManager.GetObject("left", resourceCulture);
@@ -181,6 +211,46 @@ namespace cshape_design.Properties {
         }
         
         /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap search_69_514066496164px_1229797_easyicon_net {
+            get {
+                object obj = ResourceManager.GetObject("search_69_514066496164px_1229797_easyicon_net", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap search_755px_1229797_easyicon_net {
+            get {
+                object obj = ResourceManager.GetObject("search_755px_1229797_easyicon_net", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap search_78_518105849582px_1230635_easyicon_net {
+            get {
+                object obj = ResourceManager.GetObject("search_78_518105849582px_1230635_easyicon_net", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap search_783px_1230635_easyicon_net {
+            get {
+                object obj = ResourceManager.GetObject("search_783px_1230635_easyicon_net", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查找类似于 (图标) 的 System.Drawing.Icon 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Icon setting {
@@ -191,12 +261,52 @@ namespace cshape_design.Properties {
         }
         
         /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap settings_513px_1236227_easyicon_net {
+            get {
+                object obj = ResourceManager.GetObject("settings_513px_1236227_easyicon_net", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap settings_59_0976px_1236227_easyicon_net {
+            get {
+                object obj = ResourceManager.GetObject("settings_59_0976px_1236227_easyicon_net", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查找类似于 (图标) 的 System.Drawing.Icon 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Icon spend_time_128px_1218626_easyicon_net {
             get {
                 object obj = ResourceManager.GetObject("spend_time_128px_1218626_easyicon_net", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap stats_1235px_1206227_easyicon_net {
+            get {
+                object obj = ResourceManager.GetObject("stats_1235px_1206227_easyicon_net", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap stats_90_457782299084px_1206227_easyicon_net {
+            get {
+                object obj = ResourceManager.GetObject("stats_90_457782299084px_1206227_easyicon_net", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -266,6 +376,16 @@ namespace cshape_design.Properties {
         internal static System.Drawing.Bitmap 历史查询1 {
             get {
                 object obj = ResourceManager.GetObject("历史查询1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 历史查询new {
+            get {
+                object obj = ResourceManager.GetObject("历史查询new", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -373,6 +493,16 @@ namespace cshape_design.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap 计划录入new {
+            get {
+                object obj = ResourceManager.GetObject("计划录入new", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap 计划查询 {
             get {
                 object obj = ResourceManager.GetObject("计划查询", resourceCulture);
@@ -393,6 +523,16 @@ namespace cshape_design.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap 计划查询new {
+            get {
+                object obj = ResourceManager.GetObject("计划查询new", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap 计划统计 {
             get {
                 object obj = ResourceManager.GetObject("计划统计", resourceCulture);
@@ -406,6 +546,26 @@ namespace cshape_design.Properties {
         internal static System.Drawing.Bitmap 计划统计1 {
             get {
                 object obj = ResourceManager.GetObject("计划统计1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 计划统计new {
+            get {
+                object obj = ResourceManager.GetObject("计划统计new", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 设置new {
+            get {
+                object obj = ResourceManager.GetObject("设置new", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

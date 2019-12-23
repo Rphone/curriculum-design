@@ -118,169 +118,172 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="bottom" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bottom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="close1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exit.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="exit_78_627615062762px_1226768_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exit_78.627615062762px_1226768_easyicon.net.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="history_783px_1233354_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\history_783px_1233354_easyicon.net.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="history_82_421052631579px_1233354_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\history_82.421052631579px_1233354_easyicon.net.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="图标__93_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\图标 (93).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="min" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\min.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="min1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\min1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="person" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\person.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="salver" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\salver.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search_69_514066496164px_1229797_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search_69.514066496164px_1229797_easyicon.net.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search_755px_1229797_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search_755px_1229797_easyicon.net.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search_783px_1230635_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search_783px_1230635_easyicon.net.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search_78_518105849582px_1230635_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search_78.518105849582px_1230635_easyicon.net.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="setting" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\setting.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="settings_513px_1236227_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings_513px_1236227_easyicon.net.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="settings_59_0976px_1236227_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings_59.0976px_1236227_easyicon.net.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="spend_time_128px_1218626_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\spend_time_128px_1218626_easyicon.net.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stats_1235px_1206227_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stats_1235px_1206227_easyicon.net.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stats_90_457782299084px_1206227_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stats_90.457782299084px_1206227_easyicon.net.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="title" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\title.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="top" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\top.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="top1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\top.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="work_schedule_128px_1208240_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\work_schedule_128px_1208240_easyicon.net.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="下载" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\下载.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="历史查询" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\历史查询.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="历史查询1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\历史查询1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="历史查询new" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\历史查询new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="取消按钮" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\取消按钮.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="图标__187_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\图标 (187).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="图标__18_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\图标 (18).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="图标__93_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\图标 (93).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="定时关机器kong" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\定时关机器kong.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="提醒设置" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\提醒设置.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="提醒设置1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\提醒设置1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="确定按钮" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\确定按钮.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="计划录入" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\计划录入.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="计划录入1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\计划录入1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="计划录入new" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\计划录入new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="计划查询" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\计划查询.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="计划查询1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\计划查询1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="计划查询new" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\计划查询new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="计划统计" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\计划统计.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="计划统计1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\计划统计1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="计划统计new" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\计划统计new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="设置new" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\设置new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="退出" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\退出.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="计划查询new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\计划查询new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="min1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\min1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="取消按钮" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\取消按钮.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exit_78_627615062762px_1226768_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exit_78.627615062762px_1226768_easyicon.net.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="计划统计1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\计划统计1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="work_schedule_128px_1208240_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\work_schedule_128px_1208240_easyicon.net.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settings_513px_1236227_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings_513px_1236227_easyicon.net.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stats_1235px_1206227_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stats_1235px_1206227_easyicon.net.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="确定按钮" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\确定按钮.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="计划录入1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\计划录入1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search_78_518105849582px_1230635_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search_78.518105849582px_1230635_easyicon.net.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exit.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="提醒设置1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\提醒设置1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="salver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\salver.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="退出1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\退出1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="定时关机器kong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\定时关机器kong.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="计划录入new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\计划录入new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\setting.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search_69_514066496164px_1229797_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search_69.514066496164px_1229797_easyicon.net.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="计划查询1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\计划查询1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="计划统计" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\计划统计.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="title" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\title.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="图标__187_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\图标 (187).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="闹钟2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\闹钟2.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="history_82_421052631579px_1233354_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\history_82.421052631579px_1233354_easyicon.net.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="history_783px_1233354_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\history_783px_1233354_easyicon.net.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="历史查询1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\历史查询1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spend_time_128px_1218626_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spend_time_128px_1218626_easyicon.net.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stats_90_457782299084px_1206227_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stats_90.457782299084px_1206227_easyicon.net.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="top" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\top.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="min" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\min.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settings_59_0976px_1236227_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings_59.0976px_1236227_easyicon.net.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search_755px_1229797_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search_755px_1229797_easyicon.net.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="历史查询new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\历史查询new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="计划查询" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\计划查询.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="提醒设置" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\提醒设置.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="person" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\person.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search_783px_1230635_easyicon_net" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search_783px_1230635_easyicon.net.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="历史查询" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\历史查询.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="图标__18_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\图标 (18).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="计划统计new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\计划统计new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="闹钟" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\闹钟.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="闹钟2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\闹钟2.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bottom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bottom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="设置new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\设置new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="top1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\top.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="计划录入" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\计划录入.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="20151225221718831883" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20151225221718831883.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

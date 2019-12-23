@@ -276,7 +276,7 @@
             // 
             this.txb_Key.Location = new System.Drawing.Point(595, 156);
             this.txb_Key.Name = "txb_Key";
-            this.txb_Key.Size = new System.Drawing.Size(100, 21);
+            this.txb_Key.Size = new System.Drawing.Size(100, 25);
             this.txb_Key.TabIndex = 12;
             // 
             // label6
@@ -292,7 +292,7 @@
             // 
             this.txbPreDay.Location = new System.Drawing.Point(593, 66);
             this.txbPreDay.Name = "txbPreDay";
-            this.txbPreDay.Size = new System.Drawing.Size(100, 21);
+            this.txbPreDay.Size = new System.Drawing.Size(100, 25);
             this.txbPreDay.TabIndex = 10;
             // 
             // btn_ser
@@ -320,7 +320,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(504, 166);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 12);
+            this.label3.Size = new System.Drawing.Size(82, 15);
             this.label3.TabIndex = 5;
             this.label3.Text = "内容关键字";
             // 
@@ -329,7 +329,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(508, 76);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.Size = new System.Drawing.Size(67, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = "提前天数";
             // 
@@ -347,7 +347,7 @@
             this.chb.AutoSize = true;
             this.chb.Location = new System.Drawing.Point(532, 131);
             this.chb.Name = "chb";
-            this.chb.Size = new System.Drawing.Size(120, 16);
+            this.chb.Size = new System.Drawing.Size(149, 19);
             this.chb.TabIndex = 2;
             this.chb.Text = "按照计划内容查询";
             this.chb.UseVisualStyleBackColor = true;
@@ -358,7 +358,7 @@
             this.chbDays.AutoSize = true;
             this.chbDays.Location = new System.Drawing.Point(535, 33);
             this.chbDays.Name = "chbDays";
-            this.chbDays.Size = new System.Drawing.Size(120, 16);
+            this.chbDays.Size = new System.Drawing.Size(149, 19);
             this.chbDays.TabIndex = 1;
             this.chbDays.Text = "按照提前天数查询";
             this.chbDays.UseVisualStyleBackColor = true;
@@ -479,7 +479,7 @@
             this.rb2.AutoSize = true;
             this.rb2.Location = new System.Drawing.Point(511, 144);
             this.rb2.Name = "rb2";
-            this.rb2.Size = new System.Drawing.Size(119, 16);
+            this.rb2.Size = new System.Drawing.Size(148, 19);
             this.rb2.TabIndex = 15;
             this.rb2.TabStop = true;
             this.rb2.Text = "未按期执行的计划";
@@ -490,7 +490,7 @@
             this.rb1.AutoSize = true;
             this.rb1.Location = new System.Drawing.Point(511, 106);
             this.rb1.Name = "rb1";
-            this.rb1.Size = new System.Drawing.Size(131, 16);
+            this.rb1.Size = new System.Drawing.Size(163, 19);
             this.rb1.TabIndex = 14;
             this.rb1.TabStop = true;
             this.rb1.Text = "已经按期执行的计划";
@@ -512,7 +512,7 @@
             this.label9.ForeColor = System.Drawing.Color.Red;
             this.label9.Location = new System.Drawing.Point(506, 37);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(149, 12);
+            this.label9.Size = new System.Drawing.Size(187, 15);
             this.label9.TabIndex = 4;
             this.label9.Text = "统计本年度计划的实行情况";
             // 
@@ -626,7 +626,7 @@
             // 
             this.txtHisContent.Location = new System.Drawing.Point(584, 155);
             this.txtHisContent.Name = "txtHisContent";
-            this.txtHisContent.Size = new System.Drawing.Size(110, 21);
+            this.txtHisContent.Size = new System.Drawing.Size(110, 25);
             this.txtHisContent.TabIndex = 20;
             // 
             // label13
@@ -634,7 +634,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(505, 162);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(65, 12);
+            this.label13.Size = new System.Drawing.Size(82, 15);
             this.label13.TabIndex = 19;
             this.label13.Text = "内容关键字";
             // 
@@ -643,7 +643,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(505, 99);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(53, 12);
+            this.label12.Size = new System.Drawing.Size(67, 15);
             this.label12.TabIndex = 18;
             this.label12.Text = "历史年份";
             // 
@@ -652,7 +652,7 @@
             this.cbxYear.FormattingEnabled = true;
             this.cbxYear.Location = new System.Drawing.Point(574, 92);
             this.cbxYear.Name = "cbxYear";
-            this.cbxYear.Size = new System.Drawing.Size(121, 20);
+            this.cbxYear.Size = new System.Drawing.Size(121, 23);
             this.cbxYear.TabIndex = 17;
             // 
             // btnHisQuery
@@ -681,7 +681,7 @@
             this.label8.ForeColor = System.Drawing.Color.Red;
             this.label8.Location = new System.Drawing.Point(506, 37);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(149, 12);
+            this.label8.Size = new System.Drawing.Size(187, 15);
             this.label8.TabIndex = 4;
             this.label8.Text = "统计本年度计划的实行情况";
             // 
@@ -841,7 +841,7 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(0, 100);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(59, 12);
+            this.label16.Size = new System.Drawing.Size(75, 15);
             this.label16.TabIndex = 26;
             this.label16.Text = "计划内容:";
             // 
@@ -852,7 +852,7 @@
             this.dtpExecuteTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpExecuteTime.Location = new System.Drawing.Point(68, 74);
             this.dtpExecuteTime.Name = "dtpExecuteTime";
-            this.dtpExecuteTime.Size = new System.Drawing.Size(124, 21);
+            this.dtpExecuteTime.Size = new System.Drawing.Size(124, 25);
             this.dtpExecuteTime.TabIndex = 25;
             // 
             // cbxPlanKind
@@ -860,7 +860,7 @@
             this.cbxPlanKind.FormattingEnabled = true;
             this.cbxPlanKind.Location = new System.Drawing.Point(69, 43);
             this.cbxPlanKind.Name = "cbxPlanKind";
-            this.cbxPlanKind.Size = new System.Drawing.Size(121, 20);
+            this.cbxPlanKind.Size = new System.Drawing.Size(121, 23);
             this.cbxPlanKind.TabIndex = 24;
             // 
             // rtbPlanContent
@@ -877,7 +877,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(1, 50);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(53, 12);
+            this.label14.Size = new System.Drawing.Size(67, 15);
             this.label14.TabIndex = 19;
             this.label14.Text = "计划种类";
             // 
@@ -885,7 +885,7 @@
             // 
             this.txtPlanTitle.Location = new System.Drawing.Point(69, 12);
             this.txtPlanTitle.Name = "txtPlanTitle";
-            this.txtPlanTitle.Size = new System.Drawing.Size(123, 21);
+            this.txtPlanTitle.Size = new System.Drawing.Size(123, 25);
             this.txtPlanTitle.TabIndex = 22;
             // 
             // label19
@@ -893,7 +893,7 @@
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(1, 21);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(53, 12);
+            this.label19.Size = new System.Drawing.Size(67, 15);
             this.label19.TabIndex = 21;
             this.label19.Text = "计划标题";
             // 
@@ -902,7 +902,7 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(0, 78);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(53, 12);
+            this.label15.Size = new System.Drawing.Size(67, 15);
             this.label15.TabIndex = 18;
             this.label15.Text = "历史年份";
             // 
@@ -1030,7 +1030,7 @@
             this.label26.AutoSize = true;
             this.label26.Location = new System.Drawing.Point(125, 144);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(437, 12);
+            this.label26.Size = new System.Drawing.Size(548, 15);
             this.label26.TabIndex = 15;
             this.label26.Text = "如果打开此功能,则软件每次运行时都会检查最近几天计划任务,以达到提醒的效果";
             // 
@@ -1039,7 +1039,7 @@
             this.label25.AutoSize = true;
             this.label25.Location = new System.Drawing.Point(123, 52);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(323, 12);
+            this.label25.Size = new System.Drawing.Size(406, 15);
             this.label25.TabIndex = 14;
             this.label25.Text = "例如,若设置的天数为3,则提前三天每次启动计算机都会提醒";
             // 
@@ -1048,7 +1048,7 @@
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(346, 212);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(77, 12);
+            this.label24.Size = new System.Drawing.Size(97, 15);
             this.label24.TabIndex = 13;
             this.label24.Text = "小时提醒一次";
             // 
@@ -1057,7 +1057,7 @@
             this.label23.AutoSize = true;
             this.label23.Location = new System.Drawing.Point(148, 212);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(29, 12);
+            this.label23.Size = new System.Drawing.Size(37, 15);
             this.label23.TabIndex = 12;
             this.label23.Text = "每隔";
             // 
@@ -1076,7 +1076,7 @@
             0,
             131072});
             this.nudTimerInterval.Name = "nudTimerInterval";
-            this.nudTimerInterval.Size = new System.Drawing.Size(120, 21);
+            this.nudTimerInterval.Size = new System.Drawing.Size(120, 25);
             this.nudTimerInterval.TabIndex = 11;
             this.nudTimerInterval.Value = new decimal(new int[] {
             4,
@@ -1088,7 +1088,7 @@
             // 
             this.nudDays.Location = new System.Drawing.Point(206, 14);
             this.nudDays.Name = "nudDays";
-            this.nudDays.Size = new System.Drawing.Size(120, 21);
+            this.nudDays.Size = new System.Drawing.Size(120, 25);
             this.nudDays.TabIndex = 10;
             this.nudDays.Value = new decimal(new int[] {
             3,
@@ -1111,7 +1111,7 @@
             this.chbTimecue.AutoSize = true;
             this.chbTimecue.Location = new System.Drawing.Point(96, 178);
             this.chbTimecue.Name = "chbTimecue";
-            this.chbTimecue.Size = new System.Drawing.Size(72, 16);
+            this.chbTimecue.Size = new System.Drawing.Size(89, 19);
             this.chbTimecue.TabIndex = 7;
             this.chbTimecue.Text = "实时提醒";
             this.chbTimecue.UseVisualStyleBackColor = true;
@@ -1121,7 +1121,7 @@
             this.chbAutoCheck.AutoSize = true;
             this.chbAutoCheck.Location = new System.Drawing.Point(96, 100);
             this.chbAutoCheck.Name = "chbAutoCheck";
-            this.chbAutoCheck.Size = new System.Drawing.Size(204, 16);
+            this.chbAutoCheck.Size = new System.Drawing.Size(254, 19);
             this.chbAutoCheck.TabIndex = 6;
             this.chbAutoCheck.Text = "系统启动自动检查最近的计划任务";
             this.chbAutoCheck.UseVisualStyleBackColor = true;
@@ -1131,7 +1131,7 @@
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(106, 52);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(0, 12);
+            this.label22.Size = new System.Drawing.Size(0, 15);
             this.label22.TabIndex = 5;
             // 
             // label21
@@ -1139,7 +1139,7 @@
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(123, 22);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(77, 12);
+            this.label21.Size = new System.Drawing.Size(97, 15);
             this.label21.TabIndex = 3;
             this.label21.Text = "提前提醒天数";
             // 
@@ -1189,32 +1189,32 @@
             this.tsmiExit});
             this.stip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.stip.Name = "stip";
-            this.stip.Size = new System.Drawing.Size(125, 76);
+            this.stip.Size = new System.Drawing.Size(139, 82);
             this.stip.Text = "打开窗口 ";
             // 
             // tsmiOpen
             // 
             this.tsmiOpen.Name = "tsmiOpen";
-            this.tsmiOpen.Size = new System.Drawing.Size(124, 22);
+            this.tsmiOpen.Size = new System.Drawing.Size(138, 24);
             this.tsmiOpen.Text = "打开窗口";
             this.tsmiOpen.Click += new System.EventHandler(this.tsmiOpen_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(121, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(135, 6);
             // 
             // 检查更新ToolStripMenuItem
             // 
             this.检查更新ToolStripMenuItem.Name = "检查更新ToolStripMenuItem";
-            this.检查更新ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.检查更新ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
             this.检查更新ToolStripMenuItem.Text = "检查更新";
             this.检查更新ToolStripMenuItem.Click += new System.EventHandler(this.检查更新ToolStripMenuItem_Click);
             // 
             // tsmiExit
             // 
             this.tsmiExit.Name = "tsmiExit";
-            this.tsmiExit.Size = new System.Drawing.Size(124, 22);
+            this.tsmiExit.Size = new System.Drawing.Size(138, 24);
             this.tsmiExit.Text = "退出程序";
             this.tsmiExit.Click += new System.EventHandler(this.tsmiExit_Click);
             // 
@@ -1236,6 +1236,8 @@
             // 
             // panWelcome
             // 
+            this.panWelcome.BackgroundImage = global::cshape_design.Properties.Resources._20151225221718831883;
+            this.panWelcome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panWelcome.Controls.Add(this.label27);
             this.panWelcome.Controls.Add(this.button2);
             this.panWelcome.Controls.Add(this.checkcode);
@@ -1251,7 +1253,7 @@
             this.label27.ForeColor = System.Drawing.Color.Red;
             this.label27.Location = new System.Drawing.Point(477, 164);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(0, 19);
+            this.label27.Size = new System.Drawing.Size(0, 24);
             this.label27.TabIndex = 2;
             // 
             // button2

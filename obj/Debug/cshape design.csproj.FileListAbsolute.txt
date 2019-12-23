@@ -53,3 +53,4 @@ I:\code\C#\课设2\curriculum-design\obj\Debug\cshape design.csproj.GenerateReso
 I:\code\C#\课设2\curriculum-design\obj\Debug\cshape design.exe
 I:\code\C#\课设2\curriculum-design\obj\Debug\cshape design.pdb
 D:\c#课程设计\curriculum-design\obj\Debug\cshape_design.fromPlanProcess.resources
+I:\code\C#\课设2\curriculum-design\obj\Debug\cshape_design.fromPlanProcess.resources

@@ -46,7 +46,6 @@ D:\c#课程设计\curriculum-design\bin\Debug\cshape design.pdb
 I:\code\C#\课设2\curriculum-design\bin\Debug\cshape design.exe.config
 I:\code\C#\课设2\curriculum-design\bin\Debug\cshape design.exe
 I:\code\C#\课设2\curriculum-design\bin\Debug\cshape design.pdb
-I:\code\C#\课设2\curriculum-design\obj\Debug\cshape design.csprojAssemblyReference.cache
 I:\code\C#\课设2\curriculum-design\obj\Debug\cshape_design.FrmMain.resources
 I:\code\C#\课设2\curriculum-design\obj\Debug\cshape_design.Properties.Resources.resources
 I:\code\C#\课设2\curriculum-design\obj\Debug\cshape design.csproj.GenerateResource.cache
@@ -54,3 +53,4 @@ I:\code\C#\课设2\curriculum-design\obj\Debug\cshape design.exe
 I:\code\C#\课设2\curriculum-design\obj\Debug\cshape design.pdb
 D:\c#课程设计\curriculum-design\obj\Debug\cshape_design.fromPlanProcess.resources
 I:\code\C#\课设2\curriculum-design\obj\Debug\cshape_design.fromPlanProcess.resources
+I:\code\C#\课设2\curriculum-design\obj\Debug\cshape design.csprojAssemblyReference.cache

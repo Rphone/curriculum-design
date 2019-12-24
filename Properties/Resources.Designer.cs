@@ -163,16 +163,6 @@ namespace cshape_design.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap Logo1 {
-            get {
-                object obj = ResourceManager.GetObject("Logo1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
         internal static System.Drawing.Bitmap min {
             get {
                 object obj = ResourceManager.GetObject("min", resourceCulture);
@@ -363,36 +353,6 @@ namespace cshape_design.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap 下载 {
-            get {
-                object obj = ResourceManager.GetObject("下载", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 历史查询 {
-            get {
-                object obj = ResourceManager.GetObject("历史查询", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 历史查询1 {
-            get {
-                object obj = ResourceManager.GetObject("历史查询1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
         internal static System.Drawing.Bitmap 历史查询new {
             get {
                 object obj = ResourceManager.GetObject("历史查询new", resourceCulture);
@@ -453,49 +413,9 @@ namespace cshape_design.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap 提醒设置 {
-            get {
-                object obj = ResourceManager.GetObject("提醒设置", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 提醒设置1 {
-            get {
-                object obj = ResourceManager.GetObject("提醒设置1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
         internal static System.Drawing.Bitmap 确定按钮 {
             get {
                 object obj = ResourceManager.GetObject("确定按钮", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 计划录入 {
-            get {
-                object obj = ResourceManager.GetObject("计划录入", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 计划录入1 {
-            get {
-                object obj = ResourceManager.GetObject("计划录入1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -513,49 +433,9 @@ namespace cshape_design.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap 计划查询 {
-            get {
-                object obj = ResourceManager.GetObject("计划查询", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 计划查询1 {
-            get {
-                object obj = ResourceManager.GetObject("计划查询1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
         internal static System.Drawing.Bitmap 计划查询new {
             get {
                 object obj = ResourceManager.GetObject("计划查询new", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 计划统计 {
-            get {
-                object obj = ResourceManager.GetObject("计划统计", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 计划统计1 {
-            get {
-                object obj = ResourceManager.GetObject("计划统计1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -576,26 +456,6 @@ namespace cshape_design.Properties {
         internal static System.Drawing.Bitmap 设置new {
             get {
                 object obj = ResourceManager.GetObject("设置new", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 退出 {
-            get {
-                object obj = ResourceManager.GetObject("退出", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 退出1 {
-            get {
-                object obj = ResourceManager.GetObject("退出1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

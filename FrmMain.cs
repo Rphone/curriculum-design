@@ -13,7 +13,7 @@ using System.Threading;
 using System.Collections;
 using System.Xml;
 using System.Net;
-using System.Web;
+using System.Net.Http;
 
 namespace cshape_design
 {
@@ -289,7 +289,6 @@ namespace cshape_design
                 
                 //remotedoc.Load("version.xml");
                 XmlNode remoteversion = remotedoc.SelectSingleNode("body/version");
-                //double v = Convert.ToDouble(version.InnerText);
                 string rv = remoteversion.InnerText;
                 string messag = "当前版本 " + version + "\n远程版本 " + remoteversion.InnerText;
 
@@ -297,6 +296,8 @@ namespace cshape_design
                 {
                     messag += "\n当前已经是最新版本";
                     MessageBox.Show(messag, "提示");
+                   // Thread thread = new Thread(new ThreadStart(this.UpdateThread));
+                   // thread.Start();
                 }
                 else
                 {
@@ -311,6 +312,16 @@ namespace cshape_design
                     }
                 }
 
+
+                   
+
+
+
+
+
+
+
+
             }
             catch (XmlException Xmlex)
             {
@@ -324,7 +335,7 @@ namespace cshape_design
 
         }
         public void UpdateThread()
-        {   
+        {   /*
             WebClient myWebClient = new WebClient();
             myWebClient.Proxy = null;
             
@@ -332,6 +343,70 @@ namespace cshape_design
             myWebClient.DownloadFile(url, "DesktopAssistant.exe");
             MessageBox.Show("更新成功!\n请在该程序所在文件夹寻找新版程序\n并切换到新版程序使用 ");
           
+            */
+            System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            System.Net.ServicePointManager.DefaultConnectionLimit = 512;
+            string url = "https://github.com/Rphone/curriculum-design/raw/master/bin/Debug/cshape%20design.exe";
+            XmlDocument remotedoc = new XmlDocument();
+            remotedoc.Load("https://raw.githubusercontent.com/Rphone/curriculum-design/master/bin/Debug/version.xml");
+            XmlNode remoteversion = remotedoc.SelectSingleNode("body/version");
+            XmlNode remotefilename = remotedoc.SelectSingleNode("body/filename");
+            string rv =remotefilename.InnerText + remoteversion.InnerText;
+            string filename = rv;
+            bool flag = false;
+            long startPosition = 0; // 上次下载的文件起始位置
+            FileStream writeStream; // 写入本地文件流对象
+
+            // 判断要下载的文件夹是否存在
+            if (File.Exists(filename))
+            {
+
+                writeStream = File.OpenWrite(filename);             // 存在则打开要下载的文件
+                startPosition = writeStream.Length;                  // 获取已经下载的长度
+                writeStream.Seek(startPosition, SeekOrigin.Current); // 本地文件写入位置定位
+            }
+            else
+            {
+                writeStream = new FileStream(filename, FileMode.Create);// 文件不保存创建一个文件
+                startPosition = 0;
+            }
+
+
+            try
+            {
+                HttpWebRequest myRequest = (HttpWebRequest)HttpWebRequest.Create(url);// 打开网络连接
+                myRequest.Proxy = null;
+                if (startPosition > 0)
+                {
+                    myRequest.AddRange((int)startPosition);// 设置Range值,与上面的writeStream.Seek用意相同,是为了定义远程文件读取位置
+                }
+
+
+                Stream readStream = myRequest.GetResponse().GetResponseStream();// 向服务器请求,获得服务器的回应数据流
+
+
+                byte[] btArray = new byte[8192];// 定义byte数组,向readStream读取内容和向writeStream写入内容
+                int contentSize = readStream.Read(btArray, 0, btArray.Length);// 向远程文件读第一次
+
+                while (contentSize > 0)// 如果读取长度大于零则继续读
+                {
+                    writeStream.Write(btArray, 0, contentSize);// 写入本地文件
+                    contentSize = readStream.Read(btArray, 0, btArray.Length);// 继续向远程文件读取
+                }
+
+                //关闭流
+                writeStream.Close();
+                readStream.Close();
+
+                MessageBox.Show("更新成功!\n请在该程序所在文件夹寻找新版程序\n并切换到新版程序使用 ");
+            }
+            catch (Exception)
+            {
+                writeStream.Close();
+                 MessageBox.Show("下载失败");      //返回false下载失败
+            }
+
+
 
         }
 
@@ -521,16 +596,6 @@ namespace cshape_design
                 old.Open();
             }
             OleDbDataReader oledr = olecmd.ExecuteReader();
-            //定义插入SQL语句
-            // string strintesql = "insert into tb_CueSetting values(" + Convert.ToInt32(nudDays.Value) + "," + chbAutoCheck.Checked + "," + chbTimecue + ","
-            //    +Convert.ToDouble(nudTimerInterval.Value)+")";
-
-            //定义更新SQL语句
-            // string strupdatesql = "update tb_CueSetting set Days = " + Convert.ToInt32(nudDays.Value)
-            // + ",IsAutoCheck = " + chbAutoCheck.Checked + " IsTimeCue = " + chbTimecue.Checked
-            // + ",TimeInterval = " + Convert.ToDouble(nudTimerInterval.Value);
-            // string strSql = oledr.HasRows ? strupdatesql : strintesql; //决定是要插入还是更新SQL语句
-
             string strInsertSql = "INSERT INTO tb_CueSetting VALUES(" + Convert.ToInt32(nudDays.Value) + "," + chbAutoCheck.Checked + "," + chbTimecue.Checked + "," + Convert.ToDouble(nudTimerInterval.Value) + ")";             //定义更新SQL语句             
             string strUpdateSql = "UPDATE tb_CueSetting set Days = " + Convert.ToInt32(nudDays.Value) + ",IsAutoCheck = " + chbAutoCheck.Checked + ",IsTimeCue = " + chbTimecue.Checked + ",TimeInterval = " + Convert.ToDouble(nudTimerInterval.Value);            //获取本次要执行的SQL语句             
             string strSql = oledr.HasRows ? strUpdateSql : strInsertSql;
@@ -574,7 +639,8 @@ namespace cshape_design
                             intDays = Convert.ToInt32(dt.Rows[0][0]);//获取提前天数                             
                                                                      //读取需要提醒的计划                             
                             StringBuilder sb = new StringBuilder(" Select PlanTitle from tb_Plan Where ");//创建动态字符串 
-                            string strSql = " DoFlag = '0' and   (format(ExecuteTime,'yyyy-mm-dd') >= '" + DateTime.Today.ToString("yyyy-MM-dd") + "' and format(ExecuteTime,'yyyy-mm-dd') <= '" + DateTime.Today.AddDays(intDays).ToString("yyyy-MM-dd") + "')";//过滤日期符合查询条件的记录 
+                            string strSql = " DoFlag = '0' and   (format(ExecuteTime,'yyyy-mm-dd') >= '" + DateTime.Today.ToString("yyyy-MM-dd") 
+                            + "' and format(ExecuteTime,'yyyy-mm-dd') <= '" + DateTime.Today.AddDays(intDays).ToString("yyyy-MM-dd") + "')";//过滤日期符合查询条件的记录 
                             sb.Append(strSql);
                             oleDaTime = new OleDbDataAdapter(sb.ToString(), old);//得到新的 OleDbDataAdapter实例   
                             oleDaTime.Fill(dt);//把数据写入DataTable实例中 

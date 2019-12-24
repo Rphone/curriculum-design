@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+
 namespace cshape_design
 {
     public partial class fromPlanProcess : Form
@@ -33,7 +34,7 @@ namespace cshape_design
             OleDbDataReader oleDr = oldcom.ExecuteReader();
 
             oleDr.Read();
-            //if(oleDr.HasRows)
+            if(oleDr.HasRows)
             {
                 
                 txtTile.Text = Convert.ToString(oleDr["PlanTitle"]);
@@ -53,7 +54,8 @@ namespace cshape_design
             {
                 strDoFlag = "0";
             }
-            string strSql = "Update tb_Plan set DoFlag = '" + strDoFlag + "',Explain='" + richTextBox1.Text + "' where IndivNum = " + intIndivNum;//修改处理信息 
+            string strSql = "Update tb_Plan set DoFlag = '" + strDoFlag + "',Explain='" + richTextBox1.Text
+                + "' where IndivNum = " + intIndivNum;//修改处理信息 
             OleDbCommand oleCmd = new OleDbCommand(strSql, oleCon);//创建命令对象 
             if (oleCon.State != ConnectionState.Open)//若连接未打开 
             {
@@ -83,6 +85,7 @@ namespace cshape_design
         
         private void btnExit_Click(object sender, EventArgs e)
         {
+            
             this.Close();
         }
 
